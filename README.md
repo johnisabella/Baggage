@@ -1,4 +1,4 @@
-#I’ve Got Baggage
+# I’ve Got Baggage
 
 ## Description
 This application helps users to pack for long or short trips such as a vacation, a family reunion, or even for a commute. The motivation for this project arose from the necessity to keep track of luggage and belongings in case anything is stolen or your airline looses your suitcase, for instance. Most importantly, it facilitates dealing with insurance, police reports, or airlines when having to provide details about the missing items.
