@@ -26,3 +26,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* temporary sticky footer */
+footer {
+  position: absolute;
+  bottom:0;
+  left:45%;
+
+}
+
