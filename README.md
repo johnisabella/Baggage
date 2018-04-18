@@ -1,4 +1,4 @@
-#Baggage
+## Baggage
 
 ## Description and Key Features:
 Baggage is a web-based application that, in a nutshell, allows users to keep track of stuff in bags.
