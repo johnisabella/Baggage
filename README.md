@@ -26,6 +26,7 @@ Axios
 API
 
 ## Architecture Diagram
+![project3](https://user-images.githubusercontent.com/31284004/38965318-f9b284a8-4349-11e8-804d-922098bb333e.png)
 
 ## UI Mockups
 
