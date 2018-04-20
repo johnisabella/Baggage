@@ -14,16 +14,16 @@ Shopping trips: Have a few spare moments at work or while waiting for the bus? U
 And more: Users can write their own descriptions for bags, and include any type of items that they would like. Anything that can help them stay organized.
 
 ## Tech Used
-Html, CSS
-Javascript
-Nodejs
-Expressjs
-Reactjs
-Ajax, JSON
-Mongo_db
-Mongoose
+Html, CSS, 
+Javascript, 
+Nodejs, 
+Expressjs,
+API, 
+Reactjs, 
+Ajax, JSON, 
+Mongo_db, 
+Mongoose, 
 Axios
-API
 
 ## Architecture Diagram
 ![project3](https://user-images.githubusercontent.com/31284004/38965318-f9b284a8-4349-11e8-804d-922098bb333e.png)
@@ -32,7 +32,7 @@ API
 
 
 ## API Docs
-Description of API and routes
+Description of API and routes - 
 home: /
 get/api/users
 get/:id
@@ -49,8 +49,8 @@ setting up the config file,
 all goes here
 
 ## Team Members
-Cesar - backend/database specialist
-Chris J. - frontend/design specialist
-Henry - frontend/design specialist
-John I. - project manager / generalist
-Soraia - backend database specialist
+Cesar - backend/database specialist;
+Chris J. - frontend/design specialist;
+Henry - frontend/design specialist;
+John I. - project manager / generalist;
+Soraia - backend/database specialist
