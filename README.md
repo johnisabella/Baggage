@@ -32,9 +32,9 @@ Axios
 
 
 ## API Docs
-Description of API and routes - 
-home: /
-get/api/users
+Description of API and routes  
+  * home: /
+  * get/api/users
 get/:id
 put/:id
 
