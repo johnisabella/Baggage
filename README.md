@@ -35,8 +35,8 @@ Axios
 Description of API and routes  
   * home: /
   * get/api/users
-get/:id
-put/:id
+  * get/:id
+  * put/:id
 
 ## DB Schema
 ERD Diagram and/or schema
@@ -49,8 +49,8 @@ setting up the config file,
 all goes here
 
 ## Team Members
-Cesar - backend/database specialist;
-Chris J. - frontend/design specialist;
-Henry - frontend/design specialist;
-John I. - project manager / generalist;
-Soraia - backend/database specialist
+  * Cesar - backend/database specialist
+  * Chris J. - frontend/design specialist
+  * Henry - frontend/design specialist
+  * John I. - project manager / generalist
+  * Soraia - backend/database specialist
