@@ -1,56 +1,84 @@
-## Baggage
+# Create React Express App
 
-## Description and Key Features:
-Baggage is a web-based application that, in a nutshell, allows users to keep track of stuff in bags.
+## About This Boilerplate
 
-Baggage has a variety of uses, including:
+This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
 
-Trip planning: Users can create bags that contain the items they wish to pack for a vacation or work trip. Users can share bags with friends to compare packing lists (who is packing the best outfit for the big Saturday night out?!) or to coordinate who is bringing the snacks for the shared AirBnB.
+The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
 
-Valuables tracking: The app provides a simple interface for users to enter and store key information about their most prized possessions, including pictures, serial numbers, product descriptions and more. The app provides users with the flexibility to identify the information that they feel is most important to capture, and will be most important to have on hand in case of reporting theft or lost items to insurance companies.
+## Starting the app locally
 
-Shopping trips: Have a few spare moments at work or while waiting for the bus? Users can use shopping bags to plan upcoming trips to the supermarket, hardware store, the mall, or anywhere else to truly maximize time running these errands (and help prevent unnecessary purchases!)
+Start by installing front and backend dependencies. While in this directory, run the following commands:
 
-And more: Users can write their own descriptions for bags, and include any type of items that they would like. Anything that can help them stay organized.
+```
+yarn install
+cd client
+yarn install
+cd ..
+``
 
-## Tech Used
-Html, CSS, 
-Javascript, 
-Nodejs, 
-Expressjs,
-API, 
-Reactjs, 
-Ajax, JSON, 
-Mongo_db, 
-Mongoose, 
-Axios
+After both installations complete, run the following command in your terminal:
 
-## Architecture Diagram
-![project3](https://user-images.githubusercontent.com/31284004/38965318-f9b284a8-4349-11e8-804d-922098bb333e.png)
+```
+yarn start
+```
 
-## UI Mockups
+That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
+## Deployment (Heroku)
 
-## API Docs
-Description of API and routes  
-  * home: /
-  * get/api/users
-  * get/:id
-  * put/:id
+### Create a Git Repo
 
-## DB Schema
-ERD Diagram and/or schema
+Once you're ready to deploy, start by making sure your project is a git repository. If so, proceed to the next section, otherwise run the following commands in your terminal:
 
-## Getting Started
-Instructions for installing,
-running tests,
-seeding the DB,
-setting up the config file,
-all goes here
+```
+git init
+git add .
+git commit -m "Initial commit"
+```
 
-## Team Members
-  * Cesar - backend/database specialist
-  * Chris J. - frontend/design specialist
-  * Henry - frontend/design specialist
-  * John I. - project manager / generalist
-  * Soraia - backend/database specialist
+### Heroku
+
+Make sure that you have a Heroku app created for this project. If so, proceed to the next section, otherwise run the following command in your terminal:
+
+```
+heroku create
+```
+
+Optionally add an argument for your application's name after `create`, e.g.
+
+```
+heroku myawesomeapp
+```
+
+### Deploying
+
+#### Option 1
+
+Use the deploy script inside of the outer `package.json`
+
+After confirming that you have an up to date git repository and a Heroku app created, run the following command to deploy:
+
+```
+yarn deploy
+```
+
+If all previous steps were followed correctly, your application should be deployed to Heroku!
+
+#### Option 2
+
+Manually deploy 
+
+After confirming that you have an up to date git repository and a Heroku app created, complete the following:
+
+1. Build the React app for production by running the following command:
+
+```
+yarn build
+```
+
+2. Add and commit all changes to git
+
+3. Push to Heroku
+
+If all previous steps were followed correctly, your application should be deployed to Heroku!
