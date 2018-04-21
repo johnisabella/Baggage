@@ -1,3 +1,17 @@
+//variables
+
+$blue: powderblue;
+$title: 32px;
+
+body {
+  background: $blue;
+
+  h1 {
+    font-size: $title;
+  }
+  
+}
+
 .App {
   text-align: center;
 }
@@ -12,10 +26,6 @@
   height: 150px;
   padding: 20px;
   color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
 }
 
 .App-intro {
@@ -34,4 +44,9 @@ footer {
   left:45%;
 
 }
+
+  
+
+
+
 
