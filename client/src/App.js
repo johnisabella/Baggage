@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/structure/Header';
+import Footer from './components/structure/Footer';
 import './Custom.css';
 
 class App extends Component {
