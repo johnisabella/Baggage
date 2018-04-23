@@ -14,15 +14,15 @@ Shopping trips: Have a few spare moments at work or while waiting for the bus? U
 And more: Users can write their own descriptions for bags, and include any type of items that they would like. Anything that can help them stay organized.
 
 ## Tech Used
-Html, CSS, 
-Javascript, 
-Nodejs, 
+Html, CSS,
+Javascript,
+Nodejs,
 Expressjs,
-API, 
-Reactjs, 
-Ajax, JSON, 
-Mongo_db, 
-Mongoose, 
+API,
+Reactjs,
+Ajax, JSON,
+Mongo_db,
+Mongoose,
 Axios
 
 ## Architecture Diagram
