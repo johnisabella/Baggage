@@ -29,6 +29,9 @@ Axios
 ![project3](https://user-images.githubusercontent.com/31284004/38965318-f9b284a8-4349-11e8-804d-922098bb333e.png)
 
 ## UI Mockups
+<img width="646" alt="baggagemvp_managebags_1of3" src="https://user-images.githubusercontent.com/31295651/39159612-74f7cafe-4734-11e8-851d-92a3ba3e1524.png">
+<img width="646" alt="baggagemvp_editbags_2of3" src="https://user-images.githubusercontent.com/31295651/39159614-76aa2b12-4734-11e8-9bff-681b757a613c.png">
+<img width="647" alt="baggagemvp_edititems_3of3" src="https://user-images.githubusercontent.com/31295651/39159616-7b68cbcc-4734-11e8-9ef9-828d6bb1e0aa.png">
 
 
 ## API Docs
