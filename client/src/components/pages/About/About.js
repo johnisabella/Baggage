@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class EditBag extends Component {
+class About extends Component {
   state = {};
 
   render() {
     return (
-      <p> Edit Bag Test Text </p>
+      <p> About Page Test Text </p>
       );
     }
   }
 
-export default EditBag;
+export default About;
