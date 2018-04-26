@@ -17,6 +17,7 @@ class App extends Component {
         <Router>
           <div>
             <Header />
+            <MainContainer>
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/ManageBag" component={ManageBag} />
@@ -24,7 +25,7 @@ class App extends Component {
                 <Route exact path="/EditItem" component={EditItem} />
                 <Route exact path="/About" component={About} />
               </Switch>
-              <MainContainer />
+              </MainContainer>
             <Footer />
           </div>
         </Router>
