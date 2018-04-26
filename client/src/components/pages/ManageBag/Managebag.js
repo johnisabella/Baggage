@@ -5,7 +5,7 @@ class ManageBag extends Component {
 
   render() {
     return (
-      <p> Manage Bag Page Test Text </p>
+      <p> Manage Bag Page</p>
       );
     }
   }

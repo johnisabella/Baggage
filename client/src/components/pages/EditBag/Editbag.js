@@ -11,3 +11,5 @@ class EditBag extends Component {
   }
 
 export default EditBag;
+
+//JI edited file name (4/25)
