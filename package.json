@@ -20,6 +20,7 @@
   "dependencies": {
     "chokidar": "^2.0.3",
     "express": "^4.15.4",
+    "react-router-dom": "^4.2.2",
     "yarn-run-all": "^3.1.1"
   }
 }

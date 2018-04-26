@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './components/structure/Header';
 import Footer from './components/structure/Footer';
 import MainContainer from './components/structure/MainContainer';
@@ -16,7 +16,8 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-            <Header />
+            {/* <Header /> */}
+            <MainContainer>
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/ManageBag" component={ManageBag} />
@@ -24,7 +25,7 @@ class App extends Component {
                 <Route exact path="/EditItem" component={EditItem} />
                 <Route exact path="/About" component={About} />
               </Switch>
-              <MainContainer />
+              </MainContainer>
             <Footer />
           </div>
         </Router>

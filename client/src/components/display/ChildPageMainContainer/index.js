@@ -1,1 +1,1 @@
-export { default } from "./ChildPage<MainContainer";
+export { default } from "./ChildPageMainContainer";
