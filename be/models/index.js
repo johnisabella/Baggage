@@ -1,4 +1,4 @@
 module.exports = {
-  //Bags: require("./Bags"),
+  BagItem: require("./BagItem"),
   Bags: require("./Bags")
 };

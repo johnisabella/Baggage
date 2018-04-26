@@ -4,7 +4,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = 8080;
 
 var app = express();
 
@@ -37,6 +37,19 @@ app.get("/bags", function(req, res) {
 
 app.post("/bags", function(req, res) {
   db.Bags.create(req.body)
+  .then(function(dbBags) {
+    res.json(dbBags);
+  })
+  .catch(function(err) {
+    res.json(err);
+  });
+});
+
+app.post("/bagitems", function(req, res) {
+  db.BagItems.create(req.body)
+  .then(function(dbBagItems) {
+    return db.Bags.findOneAndUpdate({}, {$push: {BagItem: dbBagItems._id} }, {new: true});
+  })
   .then(function(dbBags) {
     res.json(dbBags);
   })

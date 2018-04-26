@@ -5,26 +5,14 @@ var Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new UserSchema object
 // This is similar to a Sequelize model
-var BagsSchema = new Schema({
+var BagItemSchema = new Schema({
   // `name` must be unique and of type String
-  BagName: {
-    type: String,
-    unique: true
-  },
-  BagType: {
-    type: String,
-    unique: true
-  },
-  BagItem:[
-    {
-      type: Schema.Types.ObjectId,
-      ref: "BagItem"
-    }
-  ]
+  BagItem: String
+
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var Bags = mongoose.model("Bags", BagsSchema);
+var BagItem = mongoose.model("BagItem", BagItemSchema);
 
 // Export the User model
-module.exports = Bags;
+module.exports = BagItem;
