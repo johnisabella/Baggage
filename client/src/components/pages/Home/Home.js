@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import Header from '../../structure/Header';
+import './home.css';
 
 
 class Home extends Component {
@@ -7,6 +9,9 @@ class Home extends Component {
 
   render() {
     return (
+      <div>
+      <Header />
+      <div className="login">
       <Form>
         <FormGroup>
           <Label for="exampleEmail">Email</Label>
@@ -17,6 +22,8 @@ class Home extends Component {
           <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
         </FormGroup>
       </Form>
+    </div>
+  </div>
     );
   }
 }
