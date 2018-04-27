@@ -21,7 +21,7 @@
   border-radius: 5px;
   width: 40%;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 1%;
   padding: 1%;
   font-family: 'Questrial', sans-serif;
   font-size: 120%;
@@ -57,7 +57,7 @@
 }
 
 .infoButtonContainer {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .infoButtonContainer a {
@@ -66,7 +66,7 @@
     border: 2px solid white;
     border-radius: 5px;
     padding:10px 20px;
-    color:white;
+    color: white;
     background-color: black;
     padding-left: 8%;
     padding-right: 8%;

@@ -25,11 +25,11 @@ class Home extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <div className="emailEntry">
           {/* <Label for="loginEmail">Email Address:</Label> */}
-          <Input type="email" style={{height: '30px', width: '400px', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="email" id="emailFormField" placeholder="Email Address" />
+          <Input type="email" style={{height: '30px', width: '90%', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="email" id="emailFormField" placeholder="Email Address" />
           </div>
         <div className="passwordEntry">
           {/* <Label for="loginPassword">Password:</Label> */}
-          <Input type="password" style={{height: '30px', width: '400px', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="password" id="passwordFormField" placeholder="Password" />
+          <Input type="password" style={{height: '30px', width: '90%', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="password" id="passwordFormField" placeholder="Password" />
       </div>
       <input className="login-submit-button" type="submit" value="Submit" />
     </form>
