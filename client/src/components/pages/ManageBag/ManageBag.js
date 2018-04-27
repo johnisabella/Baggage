@@ -8,8 +8,7 @@ class ManageBag extends Component {
 
   render() {
     return (
-      <div>
-      <Header />
+      <div className="child-page-manage-bag">
       <ChildPageHeader />
       <ChildPageMainContainer />
       <p> Manage Bag Page Test Text </p>

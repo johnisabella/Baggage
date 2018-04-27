@@ -9,6 +9,10 @@ body {
   h1 {
     font-size: $title;
   }
+  a {
+    transition: .3s all;
+    text-decoration: none;
+  }
   
 }
 
@@ -21,9 +25,9 @@ body {
   height: 80px;
 }
 
-.App-header {
+.App-header, .child-pages-header {
   background-color: #222;
-  height: 150px;
+  height: auto;
   padding: 20px;
   color: white;
 }
