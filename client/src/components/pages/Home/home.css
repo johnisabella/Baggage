@@ -22,6 +22,7 @@
   width: 40%;
   margin: auto;
   margin-top: 1%;
+  margin-bottom: 5%;
   padding: 1%;
   font-family: 'Questrial', sans-serif;
   font-size: 120%;
@@ -40,10 +41,6 @@
   padding: 2%;
 }
 
-.login {
-  height: 100%;
-}
-
 .login-submit-button {
     border: 2px solid white;
     border-radius: 5px;
@@ -57,7 +54,7 @@
 }
 
 .infoButtonContainer {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .infoButtonContainer a {
