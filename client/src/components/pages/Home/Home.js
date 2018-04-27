@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Header from '../../structure/Header';
+import ChildPageHeader from '../../display/ChildPageHeader';
 import './home.css';
 
 
@@ -11,6 +12,10 @@ class Home extends Component {
     return (
       <div>
       <Header />
+      <ChildPageHeader>
+        <h1>Welcome to Baggage</h1>
+        <h3>To access your bags, please login below:</h3>
+      </ChildPageHeader>
       <div className="login">
       <Form>
         <FormGroup>
