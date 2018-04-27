@@ -1,6 +1,81 @@
-.login {
-  background-color: white;
-  width: 50%;
+@import url('https://fonts.googleapis.com/css?family=Fascinate');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+.homepageMessage {
+  margin-top: 5%;
+  font-family: 'Questrial', sans-serif;
+  font-size: 150%;
+  margin-bottom: 7%;
+}
+
+.homepageMessage h1 {
+  font-family: 'Fascinate', cursive;
+  font-size: 375%;
+  padding: 0;
+  margin: 0;
+}
+
+.loginContainer {
+  background-color: #d6dadb;
+  border: 2px solid gray;
+  border-radius: 5px;
+  width: 40%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 2%;
+  padding: 1%;
+  font-family: 'Questrial', sans-serif;
+  font-size: 120%;
+}
+
+.login h3 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 150%;
+}
+
+.emailEntry {
+  padding: 2%;
+}
+
+.passwordEntry {
+  padding: 2%;
+}
+
+.login {
+  height: 100%;
+}
+
+.login-submit-button {
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 20%;
+    padding: 2%;
+    color: white;
+    background-color: #227584;
+    margin: 20px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 75%;
+}
+
+.infoButtonContainer {
+  margin-top: 10%;
+}
+
+.infoButtonContainer a {
+    font-family: 'Questrial', sans-serif;
+    font-size: 125%;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding:10px 20px;
+    color:white;
+    background-color: black;
+    padding-left: 8%;
+    padding-right: 8%;
+
+}
+
+.infoButtonContainer a:hover {
+    color: #afc4ce;
+    border: 2px solid #afc4ce;
+    font-size: 130%;
+
 }
