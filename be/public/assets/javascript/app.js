@@ -14,7 +14,26 @@ $("#Submit1").on("click", function() {
     }
   })
 
-
   $("#BagName").val('');
   $("#BagType").val('');
+});
+
+$("#Submit2").on("click", function() {
+  event.preventDefault()
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  console.log("ID "+ username +" "+ password);
+
+  $.ajax({
+    method: "POST",
+    url: "/api/username/",
+    data: {
+      username: $("#username").val(),
+      password: $("#password").val(),
+    }
+  })
+
+  $("#username").val('');
+  $("#password").val('');
 });
