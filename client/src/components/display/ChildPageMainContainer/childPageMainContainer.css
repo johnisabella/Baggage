@@ -1,1 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Fascinate');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
 
+.aboutpageHeader {
+  margin-top: 2%;
+  font-family: 'Questrial', sans-serif;
+  font-size: 150%;
+  margin-bottom: 2%;
+}
+
+.aboutpageHeader h1 {
+  font-family: 'Fascinate', cursive;
+  font-size: 375%;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutCardContainer {
+  width: 45%;
+  margin: auto;
+  background-color: #d6dadb;
+  padding: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-top: 3%;
+  border: 2px solid gray;
+  border-radius: 20px;
+}
+
+.aboutCardContainer h2 {
+  font-size: 200%;
+}
+
+.aboutCardContainer p {
+  font-size: 110%;
+}
+
+.aboutCardText {
+  width: 70%;
+  margin: auto;
+}
+
+.aboutpageCards {
+  width: 90%;
+  margin: auto;
+  font-family: 'Questrial', sans-serif;
+}
+
+.newUserContainer {
+  background-color: #d6dadb;
+  border: 2px solid gray;
+  border-radius: 5px;
+  width: 40%;
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 12%;
+  padding: 1%;
+  font-family: 'Questrial', sans-serif;
+  font-size: 120%;
+}
+
+.login h3 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 150%;
+}
+
+.emailEntry {
+  padding: 2%;
+}
+
+.passwordEntry {
+  padding: 2%;
+}
+
+.passwordConfirm {
+  padding: 2%;
+}
+
+.login {
+  height: 100%;
+}
+
+.login-submit-button {
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 20%;
+    padding: 2%;
+    color: white;
+    background-color: #227584;
+    margin: 20px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 75%;
+}
