@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from '../../structure/Header';
 import ChildPageHeader from '../../display/ChildPageHeader';
 import ChildPageMainContainer from '../../display/ChildPageMainContainer';
 
