@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Fascinate');
-@import url('https://fonts.googleapis.com/css?family=Questrial');
+/* @import url('https://fonts.googleapis.com/css?family=Fascinate');
+@import url('https://fonts.googleapis.com/css?family=Questrial'); */
 
 .global-footer {
   position: fixed;
@@ -10,5 +10,4 @@
   color: #d6dadb;
   text-align: center;
   background-color: #222222;
-  font-family: 'Questrial', sans-serif;
 }
