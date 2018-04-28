@@ -2,18 +2,17 @@ import React, { Component } from "react";
 import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
  CardSubtitle, CardBody, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Header from '../../structure/Header';
-import ChildPageHeader from '../../display/ChildPageHeader';
+import ChildPageHeaderLoggedOut from '../../display/ChildPageHeaderLoggedOut';
 import './about.css';
 
 
 class About extends React.Component {
   state = {};
 
-
 render() {
   return (
     <div>
-      <ChildPageHeader />
+      <ChildPageHeaderLoggedOut />
       <div className="homepageMessage">
       <img src={require('../../../images/logo_primary.png')} alt="baggage logo"/>
       <h1>Baggage</h1>
