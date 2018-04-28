@@ -3,12 +3,41 @@ import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
  CardSubtitle, CardBody, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Header from '../../structure/Header';
 import ChildPageHeader from '../../display/ChildPageHeader';
+import API from "../../../utils/ReactApi";
 import './about.css';
 
 
 class About extends React.Component {
-  state = {};
+  state = {
+    email: "",
+    password1: "",
+    password2: "",
+  };
 
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.password1 === this.state.password2) {
+      //email is not blank and contains an @ symbol
+      API.saveUser({
+        email: this.state.email,
+        password1: this.state.password1
+      })
+        // .then(console.log(this.state.email))
+        .then(window.location = '/ManageBag')
+        //Need to send new users to the Manage Bags page.
+        .catch(err => console.log(err));
+    } else {
+      //modal with passwords not matching.
+    }
+  };
 
 render() {
   return (
@@ -70,17 +99,22 @@ render() {
       <form onSubmit={this.handleSubmit}>
         <div className="emailEntry">
           {/* <Label for="loginEmail">Email Address:</Label> */}
-          <Input type="email" style={{height: '30px', width: '90%', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="email" id="emailFormField" placeholder="Email Address" />
+          <Input type="email" style={{height: '30px', width: '90%', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="email" id="emailFormField" placeholder="Email Address" value={this.state.email}
+                onChange={this.handleInputChange} />
           </div>
         <div className="passwordEntry">
           {/* <Label for="loginPassword">Password:</Label> */}
-          <Input type="password" style={{height: '30px', width: '90%', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="password" id="passwordFormField" placeholder="Password" />
+          <Input type="password" style={{height: '30px', width: '90%', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="password1" id="passwordFormField" placeholder="Password" value={this.state.password1}
+                onChange={this.handleInputChange} />
       </div>
       <div className="passwordConfirm">
         {/* <Label for="loginPassword">Password:</Label> */}
-        <Input type="password" style={{height: '30px', width: '90%', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="password" id="passwordFormField" placeholder="Confirm Your Password" />
+        <Input type="password" style={{height: '30px', width: '90%', margin: '2%', "text-align": 'center', "font-family": 'Questrial, sans-serif', "font-style": 'italic'}} name="password2" id="passwordFormField" placeholder="Confirm Your Password" value={this.state.password2}
+        onChange={this.handleInputChange} />
     </div>
-      <input className="login-submit-button" type="submit" value="Submit" />
+      <input className="login-submit-button" type="submit" value="Submit"
+      disabled={!(this.state.email && this.state.password1 && this.state.password2)}
+      onClick={this.handleFormSubmit} />
     </form>
     </div>
   </div>
