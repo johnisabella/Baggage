@@ -50,10 +50,16 @@ body {
   justify-content: space-between; }
 
 .child-pages-header a {
-  border: 2px solid white;
+  background-color: #ef5850;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 5px 20px;
+  border: 1px solid #f5f1ed;
   color: white; }
+  .child-pages-header a img {
+    width: 50px; }
+  .child-pages-header a .logo-text {
+    position: relative;
+    top: -15px; }
 
 .child-pages-header .search-input {
   padding: 10px;
@@ -68,11 +74,12 @@ body {
   color: white;
   background-color: black;
   margin: 0 10px;
-  font-size: 16px; }
-
-.child-pages-header a:hover {
-  color: #03A9F4;
-  border: 2px solid #03A9F4; }
+  font-size: 16px;
+  cursor: pointer; }
 
 .child-pages-header .header-logo {
-  text-transform: uppercase; }
+  text-transform: lowercase; }
+
+a.manage-bags-header-link span {
+  position: relative;
+  top: 17px; }

@@ -82,10 +82,18 @@ body {
   justify-content: space-between;
 }
 .child-pages-header a {
-  border: 2px solid white;
+  background-color: $red;
   border-radius: 5px;
-  padding:10px 20px;
-  color:white;
+  padding:5px 20px;
+  border:1px solid $light-gray;
+  color: white;
+  img {
+    width:50px;
+  }
+  .logo-text {
+    position: relative;
+    top:-15px;
+  }
 }
 
 .child-pages-header .search-input {
@@ -103,16 +111,22 @@ body {
   background-color: black;
   margin: 0 10px;
   font-size:16px;
+  cursor: pointer;
 }
 
 .child-pages-header a:hover {
-  color:#03A9F4;
-  border: 2px solid #03A9F4;
+  // color:#03A9F4;
+  // border: 2px solid #03A9F4;
  
 }
 
 .child-pages-header .header-logo {
-  text-transform: uppercase;
+  text-transform: lowercase;
+}
+
+a.manage-bags-header-link span {
+  position: relative;
+  top:17px;
 }
 
 
