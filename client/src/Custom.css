@@ -1,26 +1,33 @@
 body {
-  background: powderblue; }
+  background: linear-gradient(#ef5850, #3e326c);
+  font-family: "Roboto", sans-serif; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-family: "PT Sans", sans-serif; }
   body h1 {
-    font-size: 32px; }
+    font-size: 4em; }
+  body h2 {
+    font-size: 2.25em; }
+  body h3 {
+    font-size: 1.75em; }
+  body h4 {
+    font-size: 1.125em; }
+  body p {
+    font-size: 1em; }
   body a {
     transition: .3s all;
-    text-decoration: none; }
+    text-decoration: none;
+    font-size: 1em; }
+  body input {
+    font-size: 1em; }
 
 .App {
   text-align: center; }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
-
 .App-header, .child-pages-header {
-  background-color: #222;
+  background-color: #222222;
   height: auto;
   padding: 20px;
   color: white; }
-
-.App-intro {
-  font-size: large; }
 
 @keyframes App-logo-spin {
   from {
@@ -28,4 +35,51 @@ body {
   to {
     transform: rotate(360deg); } }
 
-/* temporary sticky footer */
+.login-submit-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 20%;
+  padding: 2%;
+  color: #f5f1ed;
+  background-color: #ef5850;
+  margin: 20px;
+  cursor: pointer; }
+
+.child-pages-header {
+  display: flex;
+  justify-content: space-between; }
+
+.child-pages-header a {
+  background-color: #ef5850;
+  border-radius: 5px;
+  padding: 5px 20px;
+  border: 1px solid #f5f1ed;
+  color: white; }
+  .child-pages-header a img {
+    width: 50px; }
+  .child-pages-header a .logo-text {
+    position: relative;
+    top: -15px; }
+
+.child-pages-header .search-input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 16px; }
+
+.child-page-header-search-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  background-color: black;
+  margin: 0 10px;
+  font-size: 16px;
+  cursor: pointer; }
+
+.child-pages-header .header-logo {
+  text-transform: lowercase; }
+
+a.manage-bags-header-link span {
+  position: relative;
+  top: 17px; }

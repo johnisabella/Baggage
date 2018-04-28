@@ -20,12 +20,13 @@ class ChildPageHeader extends React.Component {
   render() {
       return(
         <header className="child-pages-header">
-            <a href="/" className="header-logo">Baggage</a>
+            <a href="/" className="header-logo">
+            <img src={require('../../../images/logo_primary.png')} alt="baggage logo"/> <span className="logo-text">Baggage</span></a>
             <form onSubmit={this.handleSubmit}>
           <input className="search-input" type="text" placeholder="Search by..." value={this.state.value} onChange={this.handleChange} />
         <input className="child-page-header-search-button" type="submit" value="Search" />
       </form>
-             <a href="/ManageBag/" className="manage-bags-header-link">Manage Bags</a>
+             <a href="/ManageBag/" className="manage-bags-header-link"><span>Manage Bags</span></a>
           </header>
         
       );

@@ -17,6 +17,7 @@ class Home extends React.Component {
     return (
       <div>
       <div className="homepageMessage">
+      <img src={require('../../../images/logo_primary.png')} alt="baggage logo"/>
       <h1>Baggage</h1>
       <h3>Plan and Organize Your Stuff</h3>
       </div>

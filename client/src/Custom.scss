@@ -1,17 +1,47 @@
 //variables
+///////////////////////////////////////////
 
-$blue: powderblue;
-$title: 32px;
+// Colors
+$black: rgba(34, 34, 34, 1);
+$purple: rgba(62, 50, 108, 1);
+$red: rgba(239, 88, 80, 1);
+$light-gray: rgba(245, 241, 237, 1);
 
+// Fonts
+$roboto: 'Roboto', sans-serif;
+$pt-sans:'PT Sans', sans-serif;
+
+// Typography
 body {
-  background: $blue;
+  // background: $red;
+  background: linear-gradient($red, $purple);
+  font-family: $roboto;
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $pt-sans;
+  }
   h1 {
-    font-size: $title;
+    font-size:4em;
+  }
+  h2 {
+    font-size: 2.25em;
+  }
+  h3 {
+    font-size: 1.75em;
+  }
+  h4 {
+    font-size: 1.125em;
+  }
+  p {
+    font-size: 1em;
   }
   a {
     transition: .3s all;
     text-decoration: none;
+    font-size: 1em;
+  }
+  input {
+    font-size: 1em;
   }
   
 }
@@ -19,21 +49,11 @@ body {
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header, .child-pages-header {
-  background-color: #222;
+  background-color: $black;
   height: auto;
   padding: 20px;
   color: white;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 @keyframes App-logo-spin {
@@ -41,13 +61,76 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* temporary sticky footer */
-footer {
-  // position: absolute;
-  // bottom:0;
-  // left:45%;
+// Buttons
+////////////////////////////////////
 
+.login-submit-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 20%;
+  padding: 2%;
+  color: $light-gray;
+  background-color: $red;
+  margin: 20px;
+  cursor: pointer;
 }
+
+//Child Page Header
+////////////////////////////////////
+.child-pages-header {
+  display: flex;
+  justify-content: space-between;
+}
+.child-pages-header a {
+  background-color: $red;
+  border-radius: 5px;
+  padding:5px 20px;
+  border:1px solid $light-gray;
+  color: white;
+  img {
+    width:50px;
+  }
+  .logo-text {
+    position: relative;
+    top:-15px;
+  }
+}
+
+.child-pages-header .search-input {
+  padding:10px;
+  width:200px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.child-page-header-search-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding:10px 20px;
+  color:white;
+  background-color: black;
+  margin: 0 10px;
+  font-size:16px;
+  cursor: pointer;
+}
+
+.child-pages-header a:hover {
+  // color:#03A9F4;
+  // border: 2px solid #03A9F4;
+ 
+}
+
+.child-pages-header .header-logo {
+  text-transform: lowercase;
+}
+
+a.manage-bags-header-link span {
+  position: relative;
+  top:17px;
+}
+
+
+
 
   
 
