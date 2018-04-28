@@ -45,6 +45,28 @@ app.post("/bags", function(req, res) {
   });
 });
 
+app.get("/api/username", function(req, res) {
+  db.Users.find({})
+    .then(function(dbUsers) {
+      res.json(dbUsers);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
+});
+
+app.post("/api/username", function(req, res) {
+  db.Users.create(req.body)
+  .then(function(dbUsers) {
+    res.json(dbUsers);
+    console.log("user is new");
+  })
+  .catch(function(err) {
+    res.json(err);
+    console.log("user exists");
+  });
+});
+
 app.post("/bagitems", function(req, res) {
   db.BagItems.create(req.body)
   .then(function(dbBagItems) {
