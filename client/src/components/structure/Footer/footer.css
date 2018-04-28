@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial'); */
 
 .global-footer {
-  position: fixed;
- bottom: 0;
+  position: relative;
+ bottom: -20px;
   left: 0;
+  padding:5px 0;
   width: 100%;
   margin: auto;
   color: #d6dadb;
