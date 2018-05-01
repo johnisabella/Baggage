@@ -15,7 +15,7 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="home-page-wrapper">
       <div className="homepageMessage">
       <img src={require('../../../images/logo_primary.png')} alt="baggage logo"/>
       <h1>Baggage</h1>
