@@ -5,7 +5,7 @@ class EditButton extends React.Component {
   render() {
     return (
       <div>
-        <Button color="warning">Edit</Button>{' '}
+<a href="/EditBag/" className="manage-bags-header-link"><Button color="danger"><i class="far fa-edit"></i></Button>{' '}</a>
       </div>
     );
   }
