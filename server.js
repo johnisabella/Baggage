@@ -1,20 +1,26 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const logger = require("morgan");
 const mongoose = require("mongoose");
 const db = require("./models");
 const path = require("path");
+var logger = require("morgan");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  app.use(logger("dev"));
-  app.use(bodyParser.urlencoded({ extended: true }));
-  app.use(bodyParser.json());
-  app.use(express.static("public"));
-}
+//if (process.env.NODE_ENV === "production") {
+//  app.use(express.static("client/build"));
+//  app.use(logger("dev"));
+//  app.use(bodyParser.urlencoded({ extended: true }));
+//  app.use(bodyParser.json());
+//  app.use(express.static("public"));
+//}
+
+app.use(express.static("client/build"));
+app.use(logger("dev"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(express.static("public"));
 
 mongoose.Promise = Promise;
 //mongoose.connect("mongodb://ec2-13-59-152-223.us-east-2.compute.amazonaws.com/Bags" , {
@@ -76,7 +82,7 @@ app.post("/api/username", function(req, res) {
   });
 });
 
-//Add item to bag 
+//Add item to bag
 app.post("/bagitems", function(req, res) {
   db.BagItems.create(req.body)
   .then(function(dbBagItems) {
