@@ -13,10 +13,7 @@ import './Custom.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
         <Router>
-          <div>
-            {/* <Header /> */}
             <MainContainer>
               <Switch>
                 <Route exact path="/" component={Home} />
@@ -26,11 +23,7 @@ class App extends Component {
                 <Route exact path="/About" component={About} />
               </Switch>
               </MainContainer>
-            <Footer />
-          </div>
         </Router>
-      </div>
-
     );
   }
 }
