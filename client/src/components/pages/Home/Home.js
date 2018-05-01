@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Header from '../../structure/Header';
 import ChildPageHeader from '../../display/ChildPageHeader';
@@ -36,7 +37,7 @@ class Home extends React.Component {
     </form>
     </div>
     <div className="infoButtonContainer">
-    <a href="/About/" className="home-page-to-about-page-link">What is Baggage? Click to Learn More...</a>
+    <Link to="/About/" className="home-page-to-about-page-link">What is Baggage? Click to Learn More...</Link>
   </div>
   </div>
     );

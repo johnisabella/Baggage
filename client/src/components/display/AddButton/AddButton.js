@@ -6,7 +6,8 @@ class AddButton extends React.Component {
     return (
       <div>
         {/* <Button color="danger"><img src={require('../../../images/addbagimage.png')} alt="Card image cap" /></Button>{' '} */}
-        <a href="/EditBag/" className="manage-bags-header-link"><img src={require('../../../images/addbagimage.png')} alt="Card image cap" />{' '}</a>
+        <a href="/EditBag/" className="manage-bags-header-link">
+        <img src={require('../../../images/addbagimage.png')} alt="Card image cap" />{' '}</a>
       </div>
     );
   }
