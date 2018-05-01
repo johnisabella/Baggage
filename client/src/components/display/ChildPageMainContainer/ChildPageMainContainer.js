@@ -8,10 +8,10 @@ class ChildPageMainContainer extends React.Component {
     return (
    <div className="child-page-container">
     {/* {props.children} */}
-    <Container>
-        <Col>
+    <Container className="cards-wrapper">
           <AddCard />
-        </Col>
+          <AddCard />
+          <AddCard />
         {/* <Col>
           <ExistingBagCard />
         </Col> */}
