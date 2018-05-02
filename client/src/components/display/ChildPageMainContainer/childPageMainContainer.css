@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Fascinate');
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 
+.cards-wrapper {
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .aboutpageHeader {
   margin-top: 2%;
   font-family: 'Questrial', sans-serif;

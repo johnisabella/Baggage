@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ChildPageHeader from '../../display/ChildPageHeader';
 import ChildPageMainContainer from '../../display/ChildPageMainContainer';
+import AddEditForm from '../../forms/AddEditForm';
 
 class ManageBag extends Component {
   state = {};
