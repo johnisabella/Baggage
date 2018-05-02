@@ -56,7 +56,9 @@
 }
 
 .infoButtonContainer a:hover {
-    /* color: white;
-    border: 2px solid white; */
+   border:2px solid rgba(239, 88, 80, 1);
+   background-color:white;
+   color: rgba(239, 88, 80, 1);
 
 }
+
