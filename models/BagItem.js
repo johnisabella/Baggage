@@ -7,7 +7,18 @@ var Schema = mongoose.Schema;
 // This is similar to a Sequelize model
 var BagItemSchema = new Schema({
   // `name` must be unique and of type String
-  BagItem: String
+  ItemName: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  ItemQuantity: {
+    type: Integer,
+    unique: false
+  },
+  ItemCategory: {
+    type: String,
+    unique: false
 
 });
 

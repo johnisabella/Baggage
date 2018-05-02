@@ -30,12 +30,12 @@ mongoose.connect("mongodb://localhost/BagsDB" , {
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 //Find all bags
-app.get("/bags", function(req, res) {
+app.get("/api/bags", function(req, res) {
   db.Bags.find({})
     .then(function(dbBags) {
       res.json(dbBags);
@@ -46,7 +46,7 @@ app.get("/bags", function(req, res) {
 });
 
 //Add new bags
-app.post("/bags", function(req, res) {
+app.post("/api/bags", function(req, res) {
   db.Bags.create(req.body)
   .then(function(dbBags) {
     res.json(dbBags);

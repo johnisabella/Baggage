@@ -1,6 +1,8 @@
 import React from 'react';
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import AddButton from '../../display/AddButton';
+import API from "../../../utils/ReactApi";
+
  class AddEditForm extends React.Component {
      //when we click create, we'll "store" the bag info in state
      constructor(){
@@ -8,7 +10,7 @@ import AddButton from '../../display/AddButton';
          this.state = {
              newBag:{},
              BagName: '',
-             TypeOfBag: '',
+             BagType: '',
              BagDescription: '',
          }
      }
@@ -28,15 +30,17 @@ import AddButton from '../../display/AddButton';
         handleFormSubmit = event => {
             event.preventDefault();
             console.log(event);
-            // if (this.state.bagname) {
-            //   API.saveBook({
-            //     bagname: this.state.bagname,
-            //     type: this.state.type,
-            //     description: this.state.description
-            //   })
-            //     .then(res => console.log("success"))
-            //     .catch(err => console.log(err));
-            // } 
+            if (this.state.BagName) {
+                console.log("insideBagName");
+              API.saveNewBag({
+            //These keys need to match the DB
+                BagName: this.state.BagName,
+                BagType: this.state.TypeOfBag,
+                BagDescription: this.state.BagDescription
+              })
+                .then(res => console.log("success"))
+                .catch(err => console.log(err));
+            } 
     }
      
   render() {
@@ -75,8 +79,9 @@ import AddButton from '../../display/AddButton';
                    onChange={this.handleBagNameInput}/>
                 </Col>
             </FormGroup>
+        {/* //for this button to submit properly we'll need an event handler that will be added in the handleFormSubmit */}
             <input type="submit" value="Create" />
-        {/* //for this button to submit properly we'll need an event handler that will be added in the handleSubmit */}
+            
         </Form>
         );
     }
