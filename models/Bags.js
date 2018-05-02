@@ -9,11 +9,16 @@ var BagsSchema = new Schema({
   // `name` must be unique and of type String
   BagName: {
     type: String,
+    required: true,
     unique: true
   },
   BagType: {
     type: String,
-    unique: true
+    unique: false
+  },
+  BagDescription: {
+    type: String,
+    unique: false
   },
   BagItem:[
     {

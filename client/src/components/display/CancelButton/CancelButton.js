@@ -6,8 +6,11 @@ import "./cancelButton.css";
 const CancelButton = props => (
   <span className="cancel-button" {...props}>
     |cancel|
+
   </span>
 );
 
 {/* <button onClick={() => props.onCancelBag(bagname)}>Cancel Bag</button> */}
+
 export default CancelButton;
+

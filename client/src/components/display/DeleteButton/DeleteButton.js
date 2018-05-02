@@ -5,9 +5,12 @@ import "./deleteButton.css";
 // That way we don't have to define them all individually
 const DeleteButton = props => (
   <span className="delete-button" {...props}>
+
     |delete|
+
   </span>
 );
 
 {/* <button onClick={() => props.onRemoveBag(bagname)}>Delete Bag</button> */}
+
 export default DeleteButton;
