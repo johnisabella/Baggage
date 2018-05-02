@@ -7,11 +7,11 @@ const AddCard = (props) => {
   return (
     <div>
       <Card>
-        {/* <CardImg img src={require('../../../images/addbagimage.png')} alt="Card image cap" /> */}
+         <CardImg top width="25%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=100&h=100" alt="Card image cap" />
         <CardBody>
-          <AddButton />
-          <CardTitle>Add Your Bag</CardTitle>
+          <CardTitle>Click to Add</CardTitle>
           <CardSubtitle></CardSubtitle>
+          <AddButton />
         </CardBody>
       </Card>
     </div>

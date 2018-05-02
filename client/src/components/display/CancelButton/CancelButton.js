@@ -5,9 +5,12 @@ import "./cancelButton.css";
 // That way we don't have to define them all individually
 const CancelButton = props => (
   <span className="cancel-button" {...props}>
-    <p>|cancel|</p>
+    |cancel|
+
   </span>
 );
 
 {/* <button onClick={() => props.onCancelBag(bagname)}>Cancel Bag</button> */}
+
 export default CancelButton;
+

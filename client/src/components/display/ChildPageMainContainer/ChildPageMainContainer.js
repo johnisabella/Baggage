@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import { Container, Row, Col, Card, CardTitle, CardText } from 'reactstrap';
 import AddCard from '../../display/AddCard';
 import ExistingBagCard from '../../display/ExistingBagCard';
@@ -26,9 +27,9 @@ class ChildPageMainContainer extends Component {
    <div className="child-page-container">
     {/* {props.children} */}
     <Container>
-        <Col>
+      <Col>
           <AddCard />
-        </Col>
+       </Col>
 
         {this.state.bags.map(bag => (
               <Col sm="6">
@@ -45,9 +46,7 @@ class ChildPageMainContainer extends Component {
 
 
 
-        {/* <Col>
-          <ExistingBagCard />
-        </Col> */}
+ 
     </Container>
    </div>
  );
