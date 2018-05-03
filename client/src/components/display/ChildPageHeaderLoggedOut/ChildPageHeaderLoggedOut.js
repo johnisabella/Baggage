@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './childPageHeaderLoggedOut.css';
 
 const ChildPageHeaderLoggedOut = props => (
   <header className="child-pages-header">
-            <a href="/" className="header-logo">
-            <img src={require('../../../images/logo_primary.png')} alt="baggage logo"/> <span className="logo-text">Baggage</span></a>
+            <Link to="/" className="header-logo">
+            <img src={require('../../../images/logo_primary.png')} alt="baggage logo"/> 
+            <span className="logo-text">Baggage</span>
+            </Link>
   </header>
 );
 

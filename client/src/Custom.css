@@ -1,6 +1,7 @@
 body {
   background: linear-gradient(#ef5850, #3e326c);
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  height: 100%; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: "PT Sans", sans-serif; }
   body h1 {
@@ -43,7 +44,15 @@ body {
   color: #f5f1ed;
   background-color: #ef5850;
   margin: 20px;
+  transition: all .3s;
   cursor: pointer; }
+  .login-submit-button:hover {
+    border: 2px solid #ef5850;
+    background-color: white;
+    color: #ef5850; }
+
+.home-page-wrapper {
+  text-align: center; }
 
 .child-pages-header {
   display: flex;
@@ -53,13 +62,17 @@ body {
   background-color: #ef5850;
   border-radius: 5px;
   padding: 5px 20px;
-  border: 1px solid #f5f1ed;
+  border: 2px solid #f5f1ed;
   color: white; }
   .child-pages-header a img {
     width: 50px; }
   .child-pages-header a .logo-text {
     position: relative;
     top: -15px; }
+  .child-pages-header a:hover {
+    border: 2px solid #ef5850;
+    background-color: white;
+    color: #ef5850; }
 
 .child-pages-header .search-input {
   padding: 10px;
