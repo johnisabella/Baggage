@@ -112,11 +112,12 @@ a.manage-bags-header-link span {
       border-radius: 50px;
       padding: 15px;
       position: absolute;
-      top: -140px;
-      left: 20px;
+      top: -135px;
+      left: 10px;
       visibility: hidden;
       background-color: rgba(245, 241, 237, 0.7); }
+      .edit-bag-container a.edit-bags-link .edit-bag-overlay img {
+        width: 75px; }
     .edit-bag-container a.edit-bags-link:hover .edit-bag-overlay {
       position: absolute;
-      top: -140px;
       visibility: visible; }

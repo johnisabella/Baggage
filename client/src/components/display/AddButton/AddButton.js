@@ -11,7 +11,8 @@ class AddButton extends React.Component {
         <Link to="/EditBag/" className="edit-bags-link">
         <img src={require('../../../images/addbag.png')} alt="Card image cap" />{' '}
         <div className="edit-bag-overlay">
-        <p className="manage-bag-tex">Manage Bag</p>
+        <img src={require('../../../images/pencil-icon.png')} className="plus-sign" alt="plus sign manage bag image" />{' '}
+        {/* <p className="manage-bag-tex">Manage Bag</p> */}
         </div>
         </Link>
         
