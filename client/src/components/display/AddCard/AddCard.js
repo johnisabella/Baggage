@@ -5,12 +5,12 @@ import AddButton from '../../display/AddButton';
 
 const AddCard = (props) => {
   return (
-    <div>
+    <div className="card-wrapper">
       <Card>
-         <CardImg top width="25%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=100&h=100" alt="Card image cap" />
+         {/* <CardImg top src="http://via.placeholder.com/150x200" alt="Card image cap" /> */}
         <CardBody>
-          <CardTitle>Click to Add</CardTitle>
-          <CardSubtitle></CardSubtitle>
+          {/* <CardTitle>Click to Add</CardTitle> */}
+          {/* <CardSubtitle>neeed?</CardSubtitle> */}
           <AddButton />
         </CardBody>
       </Card>
