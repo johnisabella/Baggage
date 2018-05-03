@@ -13,13 +13,13 @@ var BagItemSchema = new Schema({
     unique: true
   },
   ItemQuantity: {
-    type: Integer,
+    type: Number,
     unique: false
   },
   ItemCategory: {
     type: String,
     unique: false
-
+  }
 });
 
 // This creates our model from the above schema, using mongoose's model method
