@@ -30,9 +30,9 @@ mongoose.connect("mongodb://localhost/BagsDB" , {
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+//app.get("*", function(req, res) {
+// res.sendFile(path.join(__dirname, "./client/build/index.html"));
+//});
 
 //Find all bags
 app.get("/bags", function(req, res) {
@@ -57,14 +57,25 @@ app.post("/bags", function(req, res) {
 });
 
 //Get all username and password
-app.get("/api/username", function(req, res) {
-  db.Users.find({})
-    .then(function(dbUsers) {
-      res.json(dbUsers);
-    })
-    .catch(function(err) {
-      res.json(err);
-    });
+app.post("/api/login", function(req, res) {
+  db.Users.findOne(
+    {
+      email: req.body.email, password1: req.body.password1
+    },
+    function(error, found) {
+      // log any errors
+      if (error) {
+        console.log(error);
+        res.send(error);
+      }
+      else {
+        // Otherwise, send the note to the browser
+        // This will fire off the success function of the ajax request
+        console.log("found user");
+        res.send(found);
+      }
+    }
+  );
 });
 
 //Create new username and password
@@ -80,6 +91,16 @@ app.post("/api/username", function(req, res) {
     res.json(err);
     console.log("user exists");
   });
+});
+
+app.get("/api/listusernames", function(req, res) {
+  db.Users.find({})
+    .then(function(dbUsers) {
+      res.json(dbUsers);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
 });
 
 //Add item to bag
