@@ -26,10 +26,12 @@ class ChildPageMainContainer extends Component {
     return (
    <div className="child-page-container">
     {/* {props.children} */}
-    <Container>
-      <Col>
+    {/* <Container> */}
+    <div className="edit-bag-container">
+      {/* <Col> */}
           <AddCard />
-       </Col>
+       {/* </Col> */}
+       </div>
 
         {this.state.bags.map(bag => (
               <Col sm="6">
@@ -47,7 +49,7 @@ class ChildPageMainContainer extends Component {
 
 
  
-    </Container>
+    {/* </Container> */}
    </div>
  );
 }
