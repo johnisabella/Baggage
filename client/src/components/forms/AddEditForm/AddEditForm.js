@@ -1,16 +1,5 @@
 import React from 'react';
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-// <<<<<<< HEAD
-//
-//  class AddEditForm extends React.Component {
-//   render() {
-//     return (
-//         <Form>
-//             <FormGroup row>
-//                 <Label for="bag-name" sm={2}>Bag Name</Label>
-//                 <Col sm={10}>
-//                     <Input type="text" name="BagName" id="BagName" placeholder="bag name placeholder" />
-
 import AddButton from '../../display/AddButton';
 import API from "../../../utils/ReactApi";
 
@@ -75,8 +64,6 @@ import API from "../../../utils/ReactApi";
             <FormGroup row>
                 <Label for="type-of-bag" sm={2}>Type</Label>
                 <Col sm={10}>
-{/* <<<<<<< HEAD
-                    <Input type="select" name="TypeOfBag" id="TypeOfBag" /> */}
 
                 {/* this is creating the drop down to choose a type of bag */}
                    <select type="select" ref="typesofbag"
@@ -91,11 +78,6 @@ import API from "../../../utils/ReactApi";
             <FormGroup row>
                 <Label for="bag-description" sm={2}>Description</Label>
                 <Col sm={10}>
-{/* <<<<<<< HEAD
-                    <Input type="textarea" name="BagDescription" id="BagDescription" />
-                </Col>
-            </FormGroup> */}
-
                     <Input type="textarea" ref="bagdescription"
                     name="BagDescription" id="BagDescription"
                     value={this.state.BagDescription}

@@ -121,3 +121,11 @@ a.manage-bags-header-link span {
     .edit-bag-container a.edit-bags-link:hover .edit-bag-overlay {
       position: absolute;
       visibility: visible; }
+
+.edit-bag-wrapper {
+  display: flex;
+  justify-content: space-around; }
+  .edit-bag-wrapper input#BagName {
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px; }
