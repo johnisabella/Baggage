@@ -59,20 +59,22 @@ app.post("/api/bags", function(req, res) {
 
 //Get all username and password
 app.post("/api/login", function(req, res) {
+  console.log(req.body);
   db.Users.findOne(
     {
       email: req.body.email, password1: req.body.password1
     },
     function(error, found) {
       // log any errors
-      if (error) {
-        console.log(error);
-        res.send(error);
+      if (found == null) {
+        console.log("This is an error message.");
+        res.status(401).send(error);
       }
       else {
         // Otherwise, send the note to the browser
         // This will fire off the success function of the ajax request
         console.log("found user");
+        console.log(found);
         res.send(found);
       }
     }
