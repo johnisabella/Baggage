@@ -16,20 +16,25 @@ class EditBag extends Component {
   render() {
     return (
     <div>
-      <div className="child-page-edit-bag">
-      <ChildPageHeader />
+    <ChildPageHeader />
+      <div className="child-page-edit-bag child-page-container">
+      <div className="edit-bag-wrapper">
       <PictureCard />
+      <div className="edit-bag-form-wrapper">
       <AddEditForm />
       {/* <ChildPageMainContainer /> */}
       <SaveButton />
       <CancelButton />
       <DeleteButton />
       </div>
+      
+      </div>
+      </div>
       <div className="edit-items-container">
        {/* {props.children} */}
        <Container className="cards-wrapper">
-         <AddCard />
-         <ExistingBagCard />
+         {/* <AddCard /> */}
+         {/* <ExistingBagCard /> */}
        </Container>
       </div>
     </div>
