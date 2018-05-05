@@ -103,26 +103,26 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
             </FormGroup>
         </Form>
 
-//     render() {
-//       return (
-//       <div>
-//         <div className="child-page-edit-bag">
-//         <ChildPageHeader />
-//         <PictureCard />
-//         <AddEditForm />
-//         {/* <ChildPageMainContainer /> */}
-//         <SaveButton />
-//         <CancelButton />
-//         <DeleteButton />
-//         </div>
-//         <div className="edit-items-container">
-//          {/* {props.children} */}
-//          <Container className="cards-wrapper">
-//            <AddCard />
-//            <ExistingBagCard />
-//          </Container>
-//         </div>
-//       </div>
+// //     render() {
+// //       return (
+// //       <div>
+// //         <div className="child-page-edit-bag">
+// //         <ChildPageHeader />
+// //         <PictureCard />
+// //         <AddEditForm />
+// //         {/* <ChildPageMainContainer /> */}
+// //         <SaveButton />
+// //         <CancelButton />
+// //         <DeleteButton />
+// //         </div>
+// //         <div className="edit-items-container">
+// //          {/* {props.children} */}
+// //          <Container className="cards-wrapper">
+// //            <AddCard />
+// //            <ExistingBagCard />
+// //          </Container>
+// //         </div>
+// //       </div>
 
       );
       }

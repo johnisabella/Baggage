@@ -151,8 +151,6 @@ a.manage-bags-header-link span {
 
 .edit-bag-container {
   width:125px;
-  // height:189px;
-  // border:1px solid blue;
 
   
  a.edit-bags-link {
@@ -183,6 +181,21 @@ a.manage-bags-header-link span {
  }
  
 }
+
+// inner bag container
+.edit-bag-wrapper {
+  display:flex;
+  justify-content: space-around;
+
+  // Bag form
+  input#BagName {
+    width: 250px;
+    padding:10px;
+    border-radius: 5px;
+  }
+
+}
+
 
 
 

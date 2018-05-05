@@ -3,9 +3,7 @@ import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 import AddButton from '../../display/AddButton';
 
-const style = {
-  
-}
+
 const AddCard = (props) => {
   return (
     <div className="card-wrapper">

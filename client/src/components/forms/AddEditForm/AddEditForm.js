@@ -63,6 +63,8 @@ import API from "../../../utils/ReactApi";
             <FormGroup row>
                 <Label for="type-of-bag" sm={2}>Type</Label>
                 <Col sm={10}>
+
+                {/* this is creating the drop down to choose a type of bag */}
                    <select type="select" ref="typesofbag"
                    value={this.state.TypeOfBag}
                    onChange={this.handleBagNameInput}
