@@ -13,6 +13,14 @@ export default {
     return axios.post("/api/bags", savebags);
   },
 
+  saveUser: (userData) => {
+    return axios.post("/api/username", userData);
+  },
+ 
+  // userLogin: function(userData) {
+  // return axios.post("/api/login/", userData);
+  // }
+
   // //getting all username & pw
   // getUsername: (getusernames) => {
   //   return axios.get("/api/username", usernames);

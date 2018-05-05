@@ -1,34 +1,21 @@
-import React from 'react';
+import React, { Component } from "react";
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-// <<<<<<< HEAD
-//
-//  class AddEditForm extends React.Component {
-//   render() {
-//     return (
-//         <Form>
-//             <FormGroup row>
-//                 <Label for="bag-name" sm={2}>Bag Name</Label>
-//                 <Col sm={10}>
-//                     <Input type="text" name="BagName" id="BagName" placeholder="bag name placeholder" />
-
 import AddButton from '../../display/AddButton';
 import API from "../../../utils/ReactApi";
 
- class AddEditForm extends React.Component {
+ class AddEditForm extends Component {
      //when we click create, we'll "store" the bag info in state
-     constructor(){
-         super();
-         this.state = {
+         state = {
              newBag:{},
              BagName: '',
              BagType: '',
              BagDescription: '',
+             BagItems: []
          }
-     }
 
     //  this is creating a prop to be used in the dropdown menu to select a bag type
      static defaultProps = {
-         types: ["Tech", "Clothes", "Food", "Personal", "Custom"]
+         types: ["Travel", "Shopping", "Errands", "Donation", "Daily", "Special"]
      }
 
      handleBagNameInput = event => {
@@ -48,7 +35,8 @@ import API from "../../../utils/ReactApi";
             //These keys need to match the DB
                 BagName: this.state.BagName,
                 BagType: this.state.TypeOfBag,
-                BagDescription: this.state.BagDescription
+                BagDescription: this.state.BagDescription,
+                BagItems: this.state.BagItems
               })
                 .then(res => console.log("success"))
                 .catch(err => console.log(err));
@@ -75,10 +63,6 @@ import API from "../../../utils/ReactApi";
             <FormGroup row>
                 <Label for="type-of-bag" sm={2}>Type</Label>
                 <Col sm={10}>
-{/* <<<<<<< HEAD
-                    <Input type="select" name="TypeOfBag" id="TypeOfBag" /> */}
-
-                {/* this is creating the drop down to choose a type of bag */}
                    <select type="select" ref="typesofbag"
                    value={this.state.TypeOfBag}
                    onChange={this.handleBagNameInput}
@@ -91,11 +75,6 @@ import API from "../../../utils/ReactApi";
             <FormGroup row>
                 <Label for="bag-description" sm={2}>Description</Label>
                 <Col sm={10}>
-{/* <<<<<<< HEAD
-                    <Input type="textarea" name="BagDescription" id="BagDescription" />
-                </Col>
-            </FormGroup> */}
-
                     <Input type="textarea" ref="bagdescription"
                     name="BagDescription" id="BagDescription"
                     value={this.state.BagDescription}
