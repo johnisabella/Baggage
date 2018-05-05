@@ -1,21 +1,49 @@
-import React from 'react';
-import { Card, CardImg, CardText, CardBody,
+import React, { Component } from 'react';
+
+import { Container, Row, Col, Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 import EditButton from '../../display/EditButton';
+import API from "../../../utils/ReactApi";
 
-const ExistingBagCard = (props) => {
+class ExistingBagCard extends Component {
+    state = {
+      bags: []
+    };
+
+    componentDidMount(){
+      this.getBags();
+    }
+
+    getBags = () => {
+      API.getBags()
+      .then(res => this.setState({'bags': res.data}))
+      // .then(res => console.log("response here", res.data))
+      .catch(err => console.log(err))
+    };
+
+render() {
   return (
-    <div>
-      <Card>
-        <CardImg top width="200" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=Add%20Bag&w=180&h=256" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <EditButton />
-        </CardBody>
-      </Card>
+
+    <div className="card-wrapper">
+         {this.state.bags.map(bag => (
+               <Col sm="6">
+                 <Card>
+                 <CardBody body>
+                   <EditButton />
+                   <CardTitle>{bag.BagName}</CardTitle>
+                   {/* <CardText>{bag.TypeOfBag}</CardText> */}
+                   <CardText>{bag.BagDescription}</CardText>
+                 </CardBody>
+               </Card>
+               </Col>
+             ))}
+
+     {/* </Container> */}
     </div>
+
+
   );
-};
+}
+}
 
 export default ExistingBagCard;
