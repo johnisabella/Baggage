@@ -18,7 +18,7 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
     state = {
       newItem: {},
       ItemName: '',
-      ItemQuantity: '',
+      // ItemQuantity: '',
       ItemCategory: '',
     };
 
@@ -43,14 +43,14 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
       event.preventDefault();
       console.log(event);
       if (this.state.ItemName) {
-          console.log("insideItemName");
+        console.log("insideItemName");
         API.saveNewItem({
       //These keys need to match the DB
           ItemName: this.state.ItemName,
           ItemQuantity: this.state.ItemQuantity,
           ItemCategory: this.state.ItemCategory,
         })
-          .then(res => console.log("item added"))
+          .then(res => console.log("item added"))       
           .catch(err => console.log(err));
       } 
   }
@@ -76,18 +76,18 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
                     onChange={this.handleItemInput}/>
                 </Col>
           </FormGroup>
-          <FormGroup row>
+          {/* <FormGroup row>
                 <Label for="item-quantity" sm={2}>Quantity</Label>
-                  <Col sm={10}>
+                  <Col sm={10}> */}
                   {/* this is creating the drop down to choose quatity */}
-                    <select type="select" 
+                    {/* <select type="select" 
                      name="ItemQuantity" id="ItemQuantity" 
                      value={this.state.ItemQuantity}
                      onChange={this.handleItemInput}>
-                     {/* {itemQuantities}  */}
+                     {itemQuantities} 
                      </select>
                   </Col>
-            </FormGroup>
+            </FormGroup> */}
   
           <FormGroup row>
                 <Label for="item-category" sm={2}>Category</Label>
@@ -101,6 +101,7 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
                      </select>
                   </Col>
             </FormGroup>
+             <input type="submit" value="Add Item" />
         </Form>
 
 // //     render() {
