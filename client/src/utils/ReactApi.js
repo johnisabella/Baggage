@@ -16,10 +16,10 @@ export default {
   saveUser: (userData) => {
     return axios.post("/api/username", userData);
   },
- 
-  // userLogin: function(userData) {
-  // return axios.post("/api/login/", userData);
-  // }
+
+  userLogin: (userData) => {
+    return axios.post("/api/login", userData);
+  },
 
   //adding new item to bag
   saveNewItem: (saveItem) => {
@@ -41,4 +41,3 @@ export default {
   // getBook: function(id) {
   //   return axios.get("/api/books/" + id);
   // },
-
