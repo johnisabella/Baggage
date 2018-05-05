@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Redirect } from 'react-router-dom'
 import AddButton from '../../display/AddButton';
 import API from "../../../utils/ReactApi";
 
@@ -10,7 +11,8 @@ import API from "../../../utils/ReactApi";
              BagName: '',
              BagType: '',
              BagDescription: '',
-             BagItems: []
+             BagItems: [],
+             redirect: false
          }
 
     //  this is creating a prop to be used in the dropdown menu to select a bag type
@@ -38,7 +40,12 @@ import API from "../../../utils/ReactApi";
                 BagDescription: this.state.BagDescription,
                 BagItems: this.state.BagItems
               })
-                .then(res => console.log("success"))
+                .then(res => {
+                    console.log("success")
+                    this.setState({
+                      redirect: true,
+                    })
+                  })      
                 .catch(err => console.log(err));
             } 
 
@@ -48,6 +55,11 @@ import API from "../../../utils/ReactApi";
       let bagTypes = this.props.types.map(typesofbag => {
         return <option key={typesofbag} value={typesofbag}>{typesofbag}</option>
       } );
+
+      if (this.state.redirect) {
+          return <Redirect to="/ManageBag" />
+      }
+
     return (
         <Form onSubmit={this.handleFormSubmit} >
             <FormGroup row>

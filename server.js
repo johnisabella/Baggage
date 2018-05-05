@@ -108,7 +108,8 @@ app.get("/api/listusernames", function(req, res) {
 
 //Add item to bag
 app.post("/bagitems", function(req, res) {
-  db.BagItems.create(req.body)
+  console.log("itemcreated");
+  db.BagItem.create(req.body)
   .then(function(dbBagItems) {
     return db.Bags.findOneAndUpdate({}, {$push: {BagItem: dbBagItems._id} }, {new: true});
   })

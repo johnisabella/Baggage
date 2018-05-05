@@ -21,6 +21,11 @@ export default {
     return axios.post("/api/login", userData);
   },
 
+  //adding new item to bag
+  saveNewItem: (saveItem) => {
+    return axios.post("/bagitems", saveItem);
+  }
+
   // //getting all username & pw
   // getUsername: (getusernames) => {
   //   return axios.get("/api/username", usernames);
@@ -29,10 +34,7 @@ export default {
   // saveNewUsername: (newuser) => {
   //   return axios.post("/api/username", newuser);
   // },
-  // //adding new item to bag
-  // saveNewItem: (saveItem) => {
-  //   return axios.post("/items", saveItem);
-  // }
+  
 };
 
   // // Gets the book with the given id
