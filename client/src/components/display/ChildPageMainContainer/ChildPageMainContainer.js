@@ -18,8 +18,7 @@ class ChildPageMainContainer extends Component {
     API.getBags()
     .then(res => this.setState({'bags': res.data}))
     // .then(res => console.log("response here", res.data))
-    .catch(err => console.log(err))
-    
+    .catch(err => console.log(err))  
   };
 
   render() {
@@ -32,23 +31,16 @@ class ChildPageMainContainer extends Component {
           <AddCard />
        {/* </Col> */}
        </div>
-
         {this.state.bags.map(bag => (
               <Col sm="6">
                 <Card body>
-                Hello
                   <CardTitle>{bag.BagName}</CardTitle>
                   {/* <CardText>{bag.TypeOfBag}</CardText> */}
-                  <CardText>{bag.BagDescription}</CardText>
-
-                
+                  <CardText>{bag.BagDescription}</CardText>               
                 </Card>
               </Col>
             ))}
 
-
-
- 
     {/* </Container> */}
    </div>
  );

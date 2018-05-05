@@ -22,8 +22,7 @@ var BagsSchema = new Schema({
   },
   BagItem:[
     {
-      type: Schema.Types.ObjectId,
-      ref: "BagItem"
+      name: String,
     }
   ]
 });

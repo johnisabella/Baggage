@@ -1,23 +1,21 @@
-import React from 'react';
+import React, { Component } from "react";
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import AddButton from '../../display/AddButton';
 import API from "../../../utils/ReactApi";
 
- class AddEditForm extends React.Component {
+ class AddEditForm extends Component {
      //when we click create, we'll "store" the bag info in state
-     constructor(){
-         super();
-         this.state = {
+         state = {
              newBag:{},
              BagName: '',
              BagType: '',
              BagDescription: '',
+             BagItems: []
          }
-     }
 
     //  this is creating a prop to be used in the dropdown menu to select a bag type
      static defaultProps = {
-         types: ["Tech", "Clothes", "Food", "Personal", "Custom"]
+         types: ["Travel", "Shopping", "Errands", "Donation", "Daily", "Special"]
      }
 
      handleBagNameInput = event => {
@@ -37,7 +35,8 @@ import API from "../../../utils/ReactApi";
             //These keys need to match the DB
                 BagName: this.state.BagName,
                 BagType: this.state.TypeOfBag,
-                BagDescription: this.state.BagDescription
+                BagDescription: this.state.BagDescription,
+                BagItems: this.state.BagItems
               })
                 .then(res => console.log("success"))
                 .catch(err => console.log(err));
