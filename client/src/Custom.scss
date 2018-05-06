@@ -81,6 +81,39 @@ body {
     color: $red;
   }
 }
+.create-bag-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 20%;
+  padding: 2%;
+  color: $light-gray;
+  background-color: $red;
+  transition: all .3s;
+  margin-right: 5px;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $red;
+    background-color: $light-gray;
+    color: $red;
+  }
+}
+
+.save-button, .cancel-button, .delete-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 20%;
+  padding: 2%;
+  color: $light-gray;
+  background-color: $red;
+  transition: all .3s;
+  margin:0 5px;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $red;
+    background-color: $light-gray;
+    color: $red;
+  }
+}
 
 
 .home-page-wrapper {
@@ -126,7 +159,7 @@ body {
   padding:10px 20px;
   color:white;
   background-color: black;
-  margin: 0 10px;
+  margin: 0 20px;
   font-size:16px;
   cursor: pointer;
 
@@ -192,6 +225,19 @@ a.manage-bags-header-link span {
     width: 250px;
     padding:10px;
     border-radius: 5px;
+  }
+  select#TypeOfBag {
+    width:275px;
+    padding: 10px;
+    border-radius: 5px;
+    height:40px;
+    font-size: 16px;
+  }
+  textarea#BagDescription {
+    width:320px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 50px;
   }
 
 }

@@ -3,6 +3,9 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
 import { Redirect } from 'react-router-dom'
 import AddButton from '../../display/AddButton';
 import API from "../../../utils/ReactApi";
+import SaveButton from '../../display/SaveButton';
+import CancelButton from '../../display/CancelButton';
+import DeleteButton from '../../display/DeleteButton';
 
  class AddEditForm extends Component {
      //when we click create, we'll "store" the bag info in state
@@ -66,7 +69,7 @@ import API from "../../../utils/ReactApi";
                 <Label for="bag-name" sm={2}>Name</Label>
                 <Col sm={10}>
                    <Input type="text" ref="bagname"
-                   name="BagName" id="BagName" placeholder="bag name placeholder"
+                   name="BagName" id="BagName" placeholder="Name"
                    value={this.state.BagName}
                    onChange={this.handleBagNameInput}/>
 
@@ -96,8 +99,11 @@ import API from "../../../utils/ReactApi";
                 </Col>
             </FormGroup>
         {/* //for this button to submit properly we'll need an event handler that will be added in the handleFormSubmit */}
-            <input type="submit" value="Create" />
-
+            <input className="create-bag-button" type="submit" value="Create" />
+        <SaveButton />
+        <CancelButton />
+        <DeleteButton />
+    
         </Form>
         );
     }

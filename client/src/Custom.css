@@ -51,6 +51,36 @@ body {
     background-color: #f5f1ed;
     color: #ef5850; }
 
+.create-bag-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 20%;
+  padding: 2%;
+  color: #f5f1ed;
+  background-color: #ef5850;
+  transition: all .3s;
+  margin-right: 5px;
+  cursor: pointer; }
+  .create-bag-button:hover {
+    border: 2px solid #ef5850;
+    background-color: #f5f1ed;
+    color: #ef5850; }
+
+.save-button, .cancel-button, .delete-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 20%;
+  padding: 2%;
+  color: #f5f1ed;
+  background-color: #ef5850;
+  transition: all .3s;
+  margin: 0 5px;
+  cursor: pointer; }
+  .save-button:hover, .cancel-button:hover, .delete-button:hover {
+    border: 2px solid #ef5850;
+    background-color: #f5f1ed;
+    color: #ef5850; }
+
 .home-page-wrapper {
   text-align: center; }
 
@@ -86,7 +116,7 @@ body {
   padding: 10px 20px;
   color: white;
   background-color: black;
-  margin: 0 10px;
+  margin: 0 20px;
   font-size: 16px;
   cursor: pointer; }
 
@@ -129,3 +159,14 @@ a.manage-bags-header-link span {
     width: 250px;
     padding: 10px;
     border-radius: 5px; }
+  .edit-bag-wrapper select#TypeOfBag {
+    width: 275px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 16px; }
+  .edit-bag-wrapper textarea#BagDescription {
+    width: 320px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 50px; }

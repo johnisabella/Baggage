@@ -23,9 +23,9 @@ class EditBag extends Component {
       <div className="edit-bag-form-wrapper">
       <AddEditForm />
       {/* <ChildPageMainContainer /> */}
-      <SaveButton />
+      {/* <SaveButton />
       <CancelButton />
-      <DeleteButton />
+      <DeleteButton /> */}
       </div>
       
       </div>

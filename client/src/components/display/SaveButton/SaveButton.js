@@ -6,7 +6,7 @@ import "./saveButton.css";
 const SaveButton = props => (
 
   <span className="save-button" {...props}>
-    |save|
+  Save
   </span>
 );
 

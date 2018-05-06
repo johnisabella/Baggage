@@ -6,7 +6,7 @@ import "./deleteButton.css";
 const DeleteButton = props => (
   <span className="delete-button" {...props}>
 
-    |delete|
+    Delete
 
   </span>
 );
