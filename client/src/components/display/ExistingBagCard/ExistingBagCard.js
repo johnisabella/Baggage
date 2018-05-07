@@ -26,7 +26,7 @@ render() {
 
     <div className="card-wrapper">
          {this.state.bags.map(bag => (
-               <Col sm="6">
+               <div className="card-wrapper existing-bag-card-container">
                  <Card>
                  <CardBody body>
                    <EditButton />
@@ -35,7 +35,8 @@ render() {
                    <CardText>{bag.BagDescription}</CardText>
                  </CardBody>
                </Card>
-               </Col>
+               </div>
+               
              ))}
 
      {/* </Container> */}

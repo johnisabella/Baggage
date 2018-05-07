@@ -81,6 +81,39 @@ body {
     color: $red;
   }
 }
+.create-bag-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 20%;
+  padding: 2%;
+  color: $light-gray;
+  background-color: $red;
+  transition: all .3s;
+  margin-right: 5px;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $red;
+    background-color: $light-gray;
+    color: $red;
+  }
+}
+
+.save-button, .cancel-button, .delete-button {
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 20%;
+  padding: 2%;
+  color: $light-gray;
+  background-color: $red;
+  transition: all .3s;
+  margin:0 5px;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $red;
+    background-color: $light-gray;
+    color: $red;
+  }
+}
 
 
 .home-page-wrapper {
@@ -126,7 +159,7 @@ body {
   padding:10px 20px;
   color:white;
   background-color: black;
-  margin: 0 10px;
+  margin: 0 20px;
   font-size:16px;
   cursor: pointer;
 
@@ -144,13 +177,42 @@ a.manage-bags-header-link span {
   .child-page-container {
     margin: 0 auto;
     max-width: 1200px;
-    padding:20px 0;
+    padding:20px;
     width: 100%;
+
+    .edit-bags-title-wrapper {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+
+      .edit-bags-title {
+        width: 300px;
+        margin: 0 auto;
+        color: $light-gray;
+    }
+  }
     
 }
 
 .edit-bag-container {
-  width:125px;
+  display:flex;
+
+  .card-wrapper {
+    margin:0 20px;
+  }
+  .card-title {
+    color: $light-gray;
+    font-size:18px;
+    margin: 5px 0;
+  }
+  .card-text {
+    color: $light-gray;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: lowercase;
+    margin: 5px 0;
+    width: 200px;
+  }
 
   
  a.edit-bags-link {
@@ -158,26 +220,48 @@ a.manage-bags-header-link span {
    transition: all 1s;
 
    .edit-bag-overlay {
-    border-radius: 50px;
+    border-radius: 100px;
     padding:15px;
     position: absolute;
-    top: -135px;
+    top: 40px;
     left: 10px;
-    visibility: hidden;
+    opacity: 0;
     background-color:rgba( $light-gray, .7 );
+    transition: all .3s;
     img {
-      width:75px;
+      width:70px;
     }
 }
 
   &:hover {
     .edit-bag-overlay {
       position: absolute;
-      // top: -140px;
-      visibility: visible;
+      opacity: 1;
+      transform: rotate(360deg);
     }
   }
   
+ }
+
+ .existing-bag-card-container {
+  a.edit-bags-link {
+    position: relative;
+    transition: all 1s;
+ 
+    .edit-bag-overlay {
+     left: 50px;
+ }
+ 
+   &:hover {
+     .edit-bag-overlay {
+       position: absolute;
+       // top: -140px;
+       visibility: visible;
+     }
+   }
+   
+  }
+
  }
  
 }
@@ -193,7 +277,24 @@ a.manage-bags-header-link span {
     padding:10px;
     border-radius: 5px;
   }
+  select#TypeOfBag {
+    width:275px;
+    padding: 10px;
+    border-radius: 5px;
+    height:40px;
+    font-size: 16px;
+  }
+  textarea#BagDescription {
+    width:320px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 50px;
+  }
 
+}
+
+.existing-bag-wrapper {
+  
 }
 
 

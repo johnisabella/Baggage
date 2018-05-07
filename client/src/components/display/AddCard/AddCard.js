@@ -10,9 +10,11 @@ const AddCard = (props) => {
       <Card>
          {/* <CardImg top src="http://via.placeholder.com/150x200" alt="Card image cap" /> */}
         <CardBody>
-          {/* <CardTitle>Click to Add</CardTitle> */}
+          
           {/* <CardSubtitle>neeed?</CardSubtitle> */}
+          
           <AddButton />
+          <CardTitle>Add a Bag!</CardTitle>
         </CardBody>
       </Card>
     </div>
