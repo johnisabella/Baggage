@@ -29,9 +29,12 @@ class ChildPageMainContainer extends Component {
     <div className="edit-bag-container">
       {/* <Col> */}
           <AddCard />
+          <ExistingBagCard />
        {/* </Col> */}
    </div>
-   <ExistingBagCard />
+   {/* <div className="existing-bag-wrapper"> */}
+   
+   {/* </div> */}
         {/* {this.state.bags.map(bag => (
               <Col sm="6">
                 <Card body>
