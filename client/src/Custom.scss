@@ -177,13 +177,24 @@ a.manage-bags-header-link span {
   .child-page-container {
     margin: 0 auto;
     max-width: 1200px;
-    padding:20px 0;
+    padding:20px;
     width: 100%;
+
+    .edit-bags-title-wrapper {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+
+      .edit-bags-title {
+        width: 300px;
+        margin: 0 auto;
+        color: $light-gray;
+    }
+  }
     
 }
 
 .edit-bag-container {
-  width:125px;
   display:flex;
 
   .card-wrapper {
@@ -200,6 +211,7 @@ a.manage-bags-header-link span {
     font-style: italic;
     text-transform: lowercase;
     margin: 5px 0;
+    width: 200px;
   }
 
   
@@ -208,23 +220,24 @@ a.manage-bags-header-link span {
    transition: all 1s;
 
    .edit-bag-overlay {
-    border-radius: 50px;
+    border-radius: 100px;
     padding:15px;
     position: absolute;
     top: 40px;
     left: 10px;
-    visibility: hidden;
+    opacity: 0;
     background-color:rgba( $light-gray, .7 );
+    transition: all .3s;
     img {
-      width:75px;
+      width:70px;
     }
 }
 
   &:hover {
     .edit-bag-overlay {
       position: absolute;
-      // top: -140px;
-      visibility: visible;
+      opacity: 1;
+      transform: rotate(360deg);
     }
   }
   
@@ -236,16 +249,7 @@ a.manage-bags-header-link span {
     transition: all 1s;
  
     .edit-bag-overlay {
-     border-radius: 50px;
-     padding:15px;
-     position: absolute;
-     top: 40px;
-     left: 45px;
-     visibility: hidden;
-     background-color:rgba( $light-gray, .7 );
-     img {
-       width:75px;
-     }
+     left: 50px;
  }
  
    &:hover {

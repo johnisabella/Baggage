@@ -24,29 +24,16 @@ class ChildPageMainContainer extends Component {
   render() {
     return (
    <div className="child-page-container">
-    {/* {props.children} */}
-    {/* <Container> */}
-    <div className="edit-bag-container">
-      {/* <Col> */}
-          <AddCard />
-          <ExistingBagCard />
-       {/* </Col> */}
+   <div className="edit-bags-title-wrapper">
+   <h2 className="edit-bags-title">Manage Bags</h2>
    </div>
-   {/* <div className="existing-bag-wrapper"> */}
-   
-   {/* </div> */}
-        {/* {this.state.bags.map(bag => (
-              <Col sm="6">
-                <Card body>
-                  <CardTitle>{bag.BagName}</CardTitle> */}
-                  {/* <CardText>{bag.TypeOfBag}</CardText> */}
-                  {/* <CardText>{bag.BagDescription}</CardText>
-                </Card>
-              </Col>
-            ))} */}
-
-    {/* </Container> */}
-   </div>
+      
+      <div className="edit-bag-container">
+            <AddCard />
+            <ExistingBagCard />
+    
+    </div>
+  </div>
  );
 }
 }

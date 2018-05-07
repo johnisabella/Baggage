@@ -130,11 +130,18 @@ a.manage-bags-header-link span {
 .child-page-container {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 20px 0;
+  padding: 20px;
   width: 100%; }
+  .child-page-container .edit-bags-title-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%; }
+    .child-page-container .edit-bags-title-wrapper .edit-bags-title {
+      width: 300px;
+      margin: 0 auto;
+      color: #f5f1ed; }
 
 .edit-bag-container {
-  width: 125px;
   display: flex; }
   .edit-bag-container .card-wrapper {
     margin: 0 20px; }
@@ -147,36 +154,31 @@ a.manage-bags-header-link span {
     font-size: 16px;
     font-style: italic;
     text-transform: lowercase;
-    margin: 5px 0; }
+    margin: 5px 0;
+    width: 200px; }
   .edit-bag-container a.edit-bags-link {
     position: relative;
     transition: all 1s; }
     .edit-bag-container a.edit-bags-link .edit-bag-overlay {
-      border-radius: 50px;
+      border-radius: 100px;
       padding: 15px;
       position: absolute;
       top: 40px;
       left: 10px;
-      visibility: hidden;
-      background-color: rgba(245, 241, 237, 0.7); }
+      opacity: 0;
+      background-color: rgba(245, 241, 237, 0.7);
+      transition: all .3s; }
       .edit-bag-container a.edit-bags-link .edit-bag-overlay img {
-        width: 75px; }
+        width: 70px; }
     .edit-bag-container a.edit-bags-link:hover .edit-bag-overlay {
       position: absolute;
-      visibility: visible; }
+      opacity: 1;
+      transform: rotate(360deg); }
   .edit-bag-container .existing-bag-card-container a.edit-bags-link {
     position: relative;
     transition: all 1s; }
     .edit-bag-container .existing-bag-card-container a.edit-bags-link .edit-bag-overlay {
-      border-radius: 50px;
-      padding: 15px;
-      position: absolute;
-      top: 40px;
-      left: 45px;
-      visibility: hidden;
-      background-color: rgba(245, 241, 237, 0.7); }
-      .edit-bag-container .existing-bag-card-container a.edit-bags-link .edit-bag-overlay img {
-        width: 75px; }
+      left: 50px; }
     .edit-bag-container .existing-bag-card-container a.edit-bags-link:hover .edit-bag-overlay {
       position: absolute;
       visibility: visible; }
