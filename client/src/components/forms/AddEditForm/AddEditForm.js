@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 import AddButton from '../../display/AddButton';
 import API from "../../../utils/ReactApi";
 import SaveButton from '../../display/SaveButton';
@@ -14,10 +14,8 @@ import DeleteButton from '../../display/DeleteButton';
              BagName: '',
              BagType: '',
              BagDescription: '',
-             BagItems: [],
              redirect: false
          }
-
     //  this is creating a prop to be used in the dropdown menu to select a bag type
      static defaultProps = {
          types: ["Travel", "Shopping", "Errands", "Donation", "Daily", "Special"]
@@ -29,7 +27,6 @@ import DeleteButton from '../../display/DeleteButton';
           [name]: value,
         })
     };
-
         handleFormSubmit = event => {
             event.preventDefault();
             console.log(event);
@@ -51,10 +48,9 @@ import DeleteButton from '../../display/DeleteButton';
                   })      
                 .catch(err => console.log(err));
             } 
-
-    }
-
+        }
   render() {
+      //this is mapping through the array of bag types
       let bagTypes = this.props.types.map(typesofbag => {
         return <option key={typesofbag} value={typesofbag}>{typesofbag}</option>
       } );
@@ -72,13 +68,11 @@ import DeleteButton from '../../display/DeleteButton';
                    name="BagName" id="BagName" placeholder="Name"
                    value={this.state.BagName}
                    onChange={this.handleBagNameInput}/>
-
                 </Col>
             </FormGroup>
             <FormGroup row>
                 <Label for="type-of-bag" sm={2}>Type</Label>
                 <Col sm={10}>
-
                 {/* this is creating the drop down to choose a type of bag */}
                    <select type="select" ref="typesofbag"
                    value={this.state.TypeOfBag}
@@ -86,7 +80,6 @@ import DeleteButton from '../../display/DeleteButton';
                    name="TypeOfBag" id="TypeOfBag" >
                     {bagTypes}
                    </select>
-
                 </Col>
             </FormGroup>
             <FormGroup row>

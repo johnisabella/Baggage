@@ -22,7 +22,8 @@ var BagsSchema = new Schema({
   },
   BagItem:[
     {
-      name: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "BagItem"
     }
   ]
 });
