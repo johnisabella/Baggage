@@ -19,7 +19,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/ManageBag" component={ManageBag} />
                 <Route exact path="/EditBag" component={EditBag} />
-                <Route exact path="/EditItem" component={EditItem} />
+                <Route exact path="/EditItem/:id" component={EditItem} />
                 <Route exact path="/About" component={About} />
               </Switch>
               </MainContainer>

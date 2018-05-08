@@ -23,7 +23,7 @@ class EditButton extends React.Component {
     return (
       <div className="edit-bag-wrapper">
 
-        <Link to="/EditItem/" className="edit-bags-link">
+        <Link to={"/EditItem/"  + this.props.id} className="edit-bags-link">
         <img src={require('../../../images/existingbag.png')} alt="Card image cap" />{' '}
         <div className="edit-bag-overlay">
         <img src={require('../../../images/pencil-icon.png')} className="plus-sign" alt="plus sign manage bag image" />{' '}

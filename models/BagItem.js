@@ -12,11 +12,7 @@ var BagItemSchema = new Schema({
     required: true,
     unique: true
   },
-  ItemQuantity: {
-    type: Number,
-    unique: false
-  },
-  ItemCategory: {
+  ItemDescription: {
     type: String,
     unique: false
   }

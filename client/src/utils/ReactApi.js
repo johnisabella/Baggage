@@ -12,7 +12,7 @@ export default {
   saveNewBag: (savebags) => {
     return axios.post("/api/bags", savebags);
   },
-
+ //adding user
   saveUser: (userData) => {
     return axios.post("/api/username", userData);
   },
@@ -24,7 +24,11 @@ export default {
   //adding new item to bag
   saveNewItem: (saveItem) => {
     return axios.post("/bagitems", saveItem);
-  }
+  },
+  //getting ALL items
+  getBag: (id) => {
+    return axios.get("/api/bags/" + id);
+  },
 
   // //getting all username & pw
   // getUsername: (getusernames) => {

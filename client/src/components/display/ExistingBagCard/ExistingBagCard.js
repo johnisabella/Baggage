@@ -29,7 +29,7 @@ render() {
                <div className="card-wrapper existing-bag-card-container">
                  <Card>
                  <CardBody body>
-                   <EditButton />
+                   <EditButton id={bag._id} />
                    <CardTitle>{bag.BagName}</CardTitle>
                    {/* <CardText>{bag.TypeOfBag}</CardText> */}
                    <CardText>{bag.BagDescription}</CardText>
@@ -38,7 +38,6 @@ render() {
                </div>
                
              ))}
-
      {/* </Container> */}
     </div>
 
