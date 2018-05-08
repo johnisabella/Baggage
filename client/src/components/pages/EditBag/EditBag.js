@@ -11,8 +11,7 @@ import AddCard from '../../display/AddCard';
 import ExistingBagCard from '../../display/ExistingBagCard'
 
 class EditBag extends Component {
-  state = {
-  };
+  state = {};
 
   render() {
     return (
