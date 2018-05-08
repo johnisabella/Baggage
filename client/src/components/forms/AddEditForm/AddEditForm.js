@@ -64,7 +64,7 @@ import DeleteButton from '../../display/DeleteButton';
       }
 
     return (
-        <Form onSubmit={this.handleFormSubmit} >
+        <Form className="edit-bag-form" onSubmit={this.handleFormSubmit} >
             <FormGroup row>
                 <Label for="bag-name" sm={2}>Name</Label>
                 <Col sm={10}>
