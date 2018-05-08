@@ -12,7 +12,6 @@ import ExistingBagCard from '../../display/ExistingBagCard'
 
 class EditBag extends Component {
   state = {
-    // items: []
   };
 
   render() {

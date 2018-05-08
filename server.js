@@ -119,6 +119,16 @@ app.post("/bagitems", function(req, res) {
   });
 });
 
+app.get("/api/bags/:id", (req, res) => {
+  db.Bags.findById(req.params.id)
+    .then(function(dbBag) {
+      res.json(dbBag);
+    })
+    .catch(function(err) {
+      res.json(err);
+    });
+})
+
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
