@@ -18,8 +18,11 @@ class EditBag extends Component {
     <div>
     <ChildPageHeader />
       <div className="child-page-edit-bag child-page-container">
+      <div className="add-bag-title-container">
+    <h2>Add/Create Bag</h2>
+    </div>
       <div className="edit-bag-wrapper">
-      <PictureCard />
+      {/* <PictureCard /> */}
       <div className="edit-bag-form-wrapper">
       <AddEditForm />
       {/* <ChildPageMainContainer /> */}

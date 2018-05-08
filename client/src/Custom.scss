@@ -85,7 +85,7 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   width: 20%;
-  padding: 2%;
+  padding: 10px 20px;
   color: $light-gray;
   background-color: $red;
   transition: all .3s;
@@ -102,7 +102,7 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   width: 20%;
-  padding: 2%;
+  padding: 10px 20px;
   color: $light-gray;
   background-color: $red;
   transition: all .3s;
@@ -179,6 +179,17 @@ a.manage-bags-header-link span {
     max-width: 1200px;
     padding:20px;
     width: 100%;
+    color:$light-gray;
+    .form-group {
+      margin:20px 0;
+    }
+    .add-bag-title-container {
+      h2 {
+        margin:0 auto;
+        width:25%;
+        color: $light-gray;
+      }
+    }
 
     .edit-bags-title-wrapper {
       text-align: center;
@@ -271,6 +282,12 @@ a.manage-bags-header-link span {
   display:flex;
   justify-content: space-around;
 
+.media {
+  width:100%;
+}
+.edit-bag-form-wrapper {
+  width:100%;
+}
   // Bag form
   input#BagName {
     width: 250px;
@@ -291,10 +308,6 @@ a.manage-bags-header-link span {
     height: 50px;
   }
 
-}
-
-.existing-bag-wrapper {
-  
 }
 
 

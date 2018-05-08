@@ -55,7 +55,7 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   width: 20%;
-  padding: 2%;
+  padding: 10px 20px;
   color: #f5f1ed;
   background-color: #ef5850;
   transition: all .3s;
@@ -70,7 +70,7 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   width: 20%;
-  padding: 2%;
+  padding: 10px 20px;
   color: #f5f1ed;
   background-color: #ef5850;
   transition: all .3s;
@@ -131,7 +131,14 @@ a.manage-bags-header-link span {
   margin: 0 auto;
   max-width: 1200px;
   padding: 20px;
-  width: 100%; }
+  width: 100%;
+  color: #f5f1ed; }
+  .child-page-container .form-group {
+    margin: 20px 0; }
+  .child-page-container .add-bag-title-container h2 {
+    margin: 0 auto;
+    width: 25%;
+    color: #f5f1ed; }
   .child-page-container .edit-bags-title-wrapper {
     text-align: center;
     margin: 0 auto;
@@ -186,6 +193,10 @@ a.manage-bags-header-link span {
 .edit-bag-wrapper {
   display: flex;
   justify-content: space-around; }
+  .edit-bag-wrapper .media {
+    width: 100%; }
+  .edit-bag-wrapper .edit-bag-form-wrapper {
+    width: 100%; }
   .edit-bag-wrapper input#BagName {
     width: 250px;
     padding: 10px;
