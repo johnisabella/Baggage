@@ -66,7 +66,7 @@ body {
     background-color: #f5f1ed;
     color: #ef5850; }
 
-.save-button, .cancel-button, .delete-button {
+.save-button, .cancel-button, .delete-button, .add-item-button {
   border: 2px solid white;
   border-radius: 5px;
   width: 20%;
@@ -76,7 +76,7 @@ body {
   transition: all .3s;
   margin: 0 5px;
   cursor: pointer; }
-  .save-button:hover, .cancel-button:hover, .delete-button:hover {
+  .save-button:hover, .cancel-button:hover, .delete-button:hover, .add-item-button:hover {
     border: 2px solid #ef5850;
     background-color: #f5f1ed;
     color: #ef5850; }
@@ -212,3 +212,19 @@ a.manage-bags-header-link span {
     padding: 10px;
     border-radius: 5px;
     height: 50px; }
+
+.add-item-form {
+  margin: 0 auto; }
+
+.add-item-form-wrapper {
+  width: 100%;
+  display: flex; }
+
+.add-item-button {
+  width: 25%; }
+
+#ItemName, #ItemDescription {
+  width: 400px;
+  height: 50px;
+  padding: 5px 10px;
+  font-size: 16px; }
