@@ -39,6 +39,7 @@ mongoose.connect("mongodb://localhost/BagsDB" , {
 app.get("/api/bags", function(req, res) {
   db.Bags.find({})
     .then(function(dbBags) {
+      console.log("bag test");
       res.json(dbBags);
     })
     .catch(function(err) {
@@ -57,7 +58,7 @@ app.post("/api/bags", function(req, res) {
   });
 });
 
-//Get all username and password
+//Post username and password
 app.post("/api/login", function(req, res) {
   console.log(req.body);
   db.Users.findOne(
@@ -107,20 +108,58 @@ app.get("/api/listusernames", function(req, res) {
 });
 
 //Add item to bag
-app.post("/bagitems", function(req, res) {
+app.post("/api/bags/:id/items", function(req, res) {
   console.log("itemcreated");
   db.BagItem.create(req.body)
-  .then(function(dbBagItems) {
-    return db.Bags.findOneAndUpdate({}, {$push: {BagItem: dbBagItems._id} }, {new: true});
+  .then(function(item) {
+    console.log(item);
+    //find a bag & update by Id
+   db.Bags.findOneAndUpdate({_id:req.params.id},
+      {$push: {"BagItem": item._id} }, {new: true})
+      .then(function(bag) {
+        console.log(bag);
+        res.json(bag);
+      })
+      .catch(function(err) {
+        res.json(err);
+      });
   })
-  .then(function(dbBags) {
-    res.json(dbBags);
-  })
-  .catch(function(err) {
-    res.json(err);
+
+  //Add item to bag
+  app.post("/bagitems", function(req, res) {
+   console.log("itemcreated");
+   db.BagItem.create(req.body)
+   .then(function(dbBagItems) {
+     return db.Bags.findOneAndUpdate({}, {$push: {BagItem: dbBagItems._id} }, {new: true});
+   })
+   .then(function(dbBags) {
+     res.json(dbBags);
+   })
+   .catch(function(err) {
+     res.json(err);
+   });
   });
+
+  // app.post("/api/bags/:id/items", function(req, res) {
+  //   console.log("itemcreated");
+  //   db.BagItem.create(req.body)
+  //   .then(function(item) {
+  //     console.log(item);
+  //     //find a bag & update by Id
+  //    db.Bags.findOneAndUpdate({_id:req.params.id},
+  //       {$push: {"BagItem": item._id} }, {new: true})
+  //       .then(function(bag) {
+  //         console.log(bag);
+  //         res.json(bag);
+  //       })
+  //       .catch(function(err) {
+  //         res.json(err);
+  //       });
+  //   })
+
 });
 
+//Get item from a specific bag
 app.get("/api/bags/:id", (req, res) => {
   db.Bags.findById(req.params.id)
     .then(function(dbBag) {

@@ -13,7 +13,6 @@ class ChildPageMainContainer extends Component {
   componentDidMount(){
     this.getBags();
   }
-
   getBags = () => {
     API.getBags()
     .then(res => this.setState({'bags': res.data}))
