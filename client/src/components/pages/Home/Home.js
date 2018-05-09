@@ -67,6 +67,7 @@ class Home extends React.Component {
       </div>
       <input className="login-submit-button" type="submit" value="Submit" onClick={this.handleFormSubmit} />
     </form>
+    <Link to="/About/" className="sign-up-link">Don't have an account? Sign up!</Link>
     </div>
     <div className="infoButtonContainer">
     <Link to="/About/" className="home-page-to-about-page-link">What is Baggage? Click to Learn More...</Link>
