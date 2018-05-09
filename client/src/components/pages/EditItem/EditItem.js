@@ -59,8 +59,14 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
     render() {
     
       return (
-        <div>
-        <Form onSubmit={this.handleItemFormSubmit}> 
+        <div className="child-page-edit-item">
+        <ChildPageHeader />
+        <div className="child-page-container">
+        <div className="edit-bags-title-wrapper">
+        <h2 className="edit-bags-title">Add Item</h2>
+        </div>
+        <div className="add-item-form-wrapper">
+        <Form onSubmit={this.handleItemFormSubmit} className="add-item-form"> 
           <FormGroup row>
             <Label for="item-name" sm={2}>Item Name</Label>
                 <Col sm={10}>
@@ -79,15 +85,17 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
                     onChange={this.handleItemInput}/>
                   </Col>
             </FormGroup>
-             <input type="submit" value="Add Item" />
+             <input className="add-item-button" type="submit" value="Add Item" />
              {/* <Button onClick={this.handleAddItem}>Add item</Button> */}
         </Form>
+        </div>
 
         <div className="items-container">
           <Container>
               
           </Container>
-        </div>   
+        </div>  
+        </div> 
       </div>
       );
       }
