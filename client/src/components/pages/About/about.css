@@ -53,6 +53,10 @@
   padding: 1%;
 }
 
+.newUserContainer h3 {
+  text-align: center;
+}
+
 .emailEntry {
   padding: 2%;
 }

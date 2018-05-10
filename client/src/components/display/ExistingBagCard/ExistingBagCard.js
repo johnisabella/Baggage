@@ -24,7 +24,7 @@ class ExistingBagCard extends Component {
 render() {
   return (
 
-    <div className="card-wrapper">
+    <div className="card-wrapper existing-bag-card-wrapper">
          {this.state.bags.map(bag => (
                <div className="card-wrapper existing-bag-card-container">
                  <Card>

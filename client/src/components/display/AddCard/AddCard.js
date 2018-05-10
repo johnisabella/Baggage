@@ -6,7 +6,7 @@ import AddButton from '../../display/AddButton';
 
 const AddCard = (props) => {
   return (
-    <div className="card-wrapper">
+    <div className="card-wrapper add-card-wrapper">
       <Card>
          {/* <CardImg top src="http://via.placeholder.com/150x200" alt="Card image cap" /> */}
         <CardBody>
