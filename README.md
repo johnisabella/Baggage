@@ -37,12 +37,16 @@ Axios
 ## API Docs
 Description of API and routes  
   * home: /
-  * get/api/users
-  * get/:id
-  * put/:id
+  * EditBag: api/bags
+  * EditItem: /bagitems
+  * ManageBag: api/bags
+  * post/api/login
+  * post/api/username
+  * post/bagitems
+  * get/api/bags/:id
 
 ## DB Schema
-ERD Diagram and/or schema
+![erd](https://user-images.githubusercontent.com/31284004/39839614-a4f1faa4-53aa-11e8-8d37-30951e5aef4e.png)
 
 ## Getting Started
 Instructions for installing,
@@ -56,4 +60,4 @@ all goes here
   * Chris J. - frontend/design specialist
   * Henry - frontend/design specialist
   * John I. - project manager / generalist
-  * Soraia - backend/database specialist
+  * Soraia - frontend/backend generalist
