@@ -22,11 +22,12 @@ export default {
   },
 
   //adding new item to bag
-  saveNewItem: (saveItem) => {
-    return axios.post("/bagitems", saveItem);
+  saveNewItem: (bag_id, saveItem) => {
+    console.log(bag_id, saveItem)
+    return axios.post("/api/bags/" + bag_id + "/items", saveItem);
   },
   //getting ALL items
-  getBag: (id) => {
+  getBagItem: (id) => {
     return axios.get("/api/bags/" + id);
   },
 
@@ -38,10 +39,5 @@ export default {
   // saveNewUsername: (newuser) => {
   //   return axios.post("/api/username", newuser);
   // },
-  
-};
 
-  // // Gets the book with the given id
-  // getBook: function(id) {
-  //   return axios.get("/api/books/" + id);
-  // },
+};
