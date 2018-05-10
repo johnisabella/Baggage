@@ -47,7 +47,7 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
       if (this.state.ItemName) {
         console.log("insideItemName");
         console.log(this.props.match.params.id)
-        API.saveNewItem({
+        API.saveNewItem(this.props.match.params.id, {
       //These keys need to match the DB
           // BagId: this.props.match.params.id,
           ItemName: this.state.ItemName,

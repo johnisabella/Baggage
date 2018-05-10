@@ -107,61 +107,45 @@ app.get("/api/listusernames", function(req, res) {
     });
 });
 
-//Add item to bag
-app.post("/api/bags/:id/items", function(req, res) {
-  console.log("itemcreated");
-  db.BagItem.create(req.body)
-  .then(function(item) {
-    console.log(item);
-    //find a bag & update by Id
-   db.Bags.findOneAndUpdate({_id:req.params.id},
-      {$push: {"BagItem": item._id} }, {new: true})
-      .then(function(bag) {
-        console.log(bag);
-        res.json(bag);
-      })
-      .catch(function(err) {
-        res.json(err);
-      });
-  })
+
 
   //Add item to bag
-  app.post("/bagitems", function(req, res) {
-   console.log("itemcreated");
-   db.BagItem.create(req.body)
-   .then(function(dbBagItems) {
-     return db.Bags.findOneAndUpdate({}, {$push: {BagItem: dbBagItems._id} }, {new: true});
-   })
-   .then(function(dbBags) {
-     res.json(dbBags);
-   })
-   .catch(function(err) {
-     res.json(err);
-   });
-  });
+  // app.post("/bagitems", function(req, res) {
+  //  console.log("itemcreated");
+  //  db.BagItem.create(req.body)
+  //  .then(function(dbBagItems) {
+  //    return db.Bags.findOneAndUpdate({}, {$push: {BagItem: dbBagItems._id} }, {new: true});
+  //  })
+  //  .then(function(dbBags) {
+  //    res.json(dbBags);
+  //  })
+  //  .catch(function(err) {
+  //    res.json(err);
+  //  });
+  // });
 
-  // app.post("/api/bags/:id/items", function(req, res) {
-  //   console.log("itemcreated");
-  //   db.BagItem.create(req.body)
-  //   .then(function(item) {
-  //     console.log(item);
-  //     //find a bag & update by Id
-  //    db.Bags.findOneAndUpdate({_id:req.params.id},
-  //       {$push: {"BagItem": item._id} }, {new: true})
-  //       .then(function(bag) {
-  //         console.log(bag);
-  //         res.json(bag);
-  //       })
-  //       .catch(function(err) {
-  //         res.json(err);
-  //       });
-  //   })
-
+  app.post("/api/bags/:id/items", function(req, res) {
+    console.log("item created", req.body, 'test');
+    db.BagItem.create(req.body)
+    .then(function(item) {
+      console.log(item);
+      //find a bag & update by Id
+     return db.Bags.findOneAndUpdate({_id:req.params.id},
+        {$push: {"BagItem": item._id} }, {new: true})
+        .then(function(bag) {
+          console.log(bag);
+          res.json(bag);
+        })
+        .catch(function(err) {
+          res.json(err);
+        });
+    })
 });
 
 //Get item from a specific bag
 app.get("/api/bags/:id", (req, res) => {
   db.Bags.findById(req.params.id)
+    .populate('BagItem')
     .then(function(dbBag) {
       res.json(dbBag);
     })
