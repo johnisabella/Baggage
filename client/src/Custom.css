@@ -44,11 +44,11 @@ body {
 .login-submit-button {
   border: 2px solid white;
   border-radius: 5px;
-  width: 20%;
+  width: 100%;
   padding: 2%;
   color: #f5f1ed;
   background-color: #ef5850;
-  margin: 20px;
+  margin: 20px 0;
   transition: all .3s;
   cursor: pointer; }
   .login-submit-button:hover {
