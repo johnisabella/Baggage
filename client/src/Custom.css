@@ -36,6 +36,11 @@ body {
   to {
     transform: rotate(360deg); } }
 
+.sign-up-link {
+  color: #3e326c; }
+  .sign-up-link:hover {
+    text-decoration: underline; }
+
 .login-submit-button {
   border: 2px solid white;
   border-radius: 5px;

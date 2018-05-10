@@ -61,6 +61,13 @@ body {
   to { transform: rotate(360deg); }
 }
 
+.sign-up-link {
+  color:$purple;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 
 // Buttons
 ////////////////////////////////////
@@ -314,7 +321,6 @@ a.manage-bags-header-link span {
 // Add Item Form
 
 .add-item-form {
-  // width: 50%;
   margin: 0 auto;
 }
 
