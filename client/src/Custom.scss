@@ -75,7 +75,7 @@ body {
 .login-submit-button {
   border: 2px solid white;
   border-radius: 5px;
-  width: 100%;
+  width: 200px;;
   padding: 2%;
   color: $light-gray;
   background-color: $red;
@@ -215,6 +215,8 @@ a.manage-bags-header-link span {
 
 .edit-bag-container {
   display:flex;
+  justify-content: space-evenly;
+  margin-top:50px;
 
   .card-wrapper {
     margin:0 20px;
@@ -285,10 +287,23 @@ a.manage-bags-header-link span {
  
 }
 
+// create bags
+.card-wrapper.existing-bag-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  .card-title {
+    text-transform: capitalize;
+  }
+  .card-text {
+    text-transform: lowercase;
+  }
+}
+
 // inner bag container
 .edit-bag-wrapper {
   display:flex;
   justify-content: space-around;
+ 
 
 .media {
   width:100%;
@@ -336,12 +351,63 @@ a.manage-bags-header-link span {
 
 }
 
-#ItemName, #ItemDescription {
+#ItemName {
   width: 400px;
-  height: 50px;
+  height: 25px;
   padding:5px 10px;
   font-size:16px;
 }
+
+#ItemDescription {
+  width: 400px;
+  height: 100px;
+  padding:5px 10px;
+  font-size:16px;
+}
+
+// Items group
+.items-section {
+  padding-top:50px;
+}
+
+
+.items-title {
+  text-align: center;
+}
+
+.items-container {
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  .card {
+    width:250px;
+    height:200px;
+    border:1px solid rgba(0,0,0,.125);
+    background-color: rgba(0,0,0,.3);
+    transition: all .3s;
+    &:hover {
+      box-shadow: 6px 7px 5px -2px rgba(0,0,0,0.75);
+    }
+    
+  }
+  .card-title {
+    font-size: 1.125em;
+    text-transform: uppercase;
+    margin-top:0;
+    padding: .75rem 1.25rem;
+      margin-bottom: 0;
+      background-color: rgba($black, .7);
+      border-bottom: 1px solid rgba(0,0,0,.125);
+  }
+  .card-text {
+    text-transform: lowercase;
+  }
+
+
+ 
+}
+
+
 
 
 

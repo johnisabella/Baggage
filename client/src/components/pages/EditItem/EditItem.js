@@ -92,14 +92,19 @@ import { Col, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap
         </Form>
         </div>
 
-        <div className="items-container">
-        <p>bags should render here</p>
+        <div className="items-section">
+          <div className="items-title">
+          <h2>Your Items</h2>
+          </div>
+          <div className="items-container">
+          
           {this.state.items.map(item => (
             <Card>
               <CardTitle>{item.ItemName}</CardTitle>
               <CardText>{item.ItemDescription}</CardText>
             </Card>
           ))}
+          </div>
         </div>  
         </div> 
       </div>
